@@ -1,0 +1,1 @@
+angular.module("camtaylorApp", ["firebase", "ui.router", "ngMaterial", "ngAnimate"])
