@@ -29,11 +29,27 @@
 			position: relative
 	
 .card--expanded
-	background-color: purple
-	width: 70vw
-	height: 50vh
-	margin: 0 auto
 	position: relative
 	z-index: 0
-	padding-top: 10vh
-			
+	opacity: 0
+	transition: $transition
+	position: relative
+	max-height: 0vh
+	overflow: hidden
+	background-color: gray
+	.expanded-wrapper
+		background-color: darkgray
+		padding-top: 150vh
+		width: 70vw
+		height: auto
+		margin: 0 auto
+		transition: $transition
+		position: relative
+.card--expanded-openanimtion
+	-webkit-animation: uiview-open 800ms linear both
+	animation: uiview-open 800ms linear both
+	opacity: 1
+	max-height: 50vh
+	.expanded-wrapper
+		padding-top: 10vh
+	
