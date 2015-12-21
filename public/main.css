@@ -1,0 +1,23 @@
+html,
+body,
+ul,
+ol,
+video,
+div {
+  margin: 0;
+  padding: 0; }
+
+.background {
+  height: 100vh;
+  width: 100vw;
+  background-color: gray; }
+
+.card-wrapper {
+  background-color: #FFF;
+  height: 80%;
+  width: 70%;
+  margin: 0 auto;
+  position: relative;
+  top: 8vh; }
+
+/*# sourceMappingURL=main.css.map */

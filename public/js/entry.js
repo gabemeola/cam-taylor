@@ -1,7 +1,7 @@
 //App
 require( '.\/app.js');
 //Directive
-
+require( '.\/Directives.js');
 
 //Controllers
 require( '.\/ctMain.js');
