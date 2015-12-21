@@ -47,10 +47,10 @@
 	//App
 	__webpack_require__( 1);
 	//Directive
-
+	__webpack_require__( 2);
 
 	//Controllers
-	__webpack_require__( 2);
+	__webpack_require__( 3);
 	//End Of Controllers
 
 	//Services
@@ -67,8 +67,48 @@
 
 	angular.module("camtaylorApp", ["firebase", "ui.router", "ngMaterial", "ngAnimate"])
 
+	.constant("FIRE", {
+		url: ""
+	})
+
+	.config(function ($urlRouterProvider, $stateProvider) {
+		$urlRouterProvider.otherwise("/");
+		$stateProvider
+			.state('home', {
+				url: '/',
+				templateUrl: null,
+				controller: null,
+			})
+			.state("cameronbio", {
+				url: '/cameronbio',
+				templateUrl: './templates/_cameronbio.html',
+				controller: null,
+			})
+			.state("taylorbio", {
+				url: "/taylorbio",
+				templateUrl: "./templates/_taylorbio.html",
+				controller: null,
+			})
+			.state("rsvp", {
+				url: "/rsvp",
+				templateUrl: "./templates/_rsvp.html",
+				controller: null,
+			});
+	})
+
 /***/ },
 /* 2 */
+/***/ function(module, exports) {
+
+	angular.module("camtaylorApp")
+	.directive("cardContent", function(){
+		return {
+			templateUrl: "./templates/_card-content.html"				 
+		};			 
+	})
+
+/***/ },
+/* 3 */
 /***/ function(module, exports) {
 
 	angular.module("camtaylorApp")

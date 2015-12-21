@@ -42,8 +42,29 @@ a {
       background-size: cover;
       background-position: bottom; }
     .card-wrapper .card .card-flexbox {
-      display: flex; }
-      .card-wrapper .card .card-flexbox .card-content {
-        text-align: center; }
+      display: flex;
+      overflow: hidden;
+      margin-top: 1%; }
+
+card-content {
+  text-align: center;
+  flex-basis: 80%;
+  position: relative; }
+  card-content h1 {
+    position: relative;
+    left: 10%; }
+  card-content p {
+    position: relative;
+    left: 10%; }
+
+.countdown {
+  height: 18vh;
+  width: auto;
+  max-height: 200px;
+  max-width: 200px;
+  background-color: gray;
+  position: relative;
+  flex-basis: 20%;
+  top: 1vh; }
 
 /*# sourceMappingURL=main.css.map */
