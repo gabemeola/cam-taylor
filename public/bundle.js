@@ -76,7 +76,7 @@
 		$stateProvider
 			.state('home', {
 				url: '/',
-				templateUrl: null,
+				templateUrl: './templates/_cameronbio.html',
 				controller: null,
 			})
 			.state("cameronbio", {
@@ -113,6 +113,12 @@
 
 	angular.module("camtaylorApp")
 	.controller("ctMain", function($scope){
+		
+		$scope.uiviewOpen = function(init) {
+			if(init){
+				$scope.uiview = true;
+			}	
+		};
 		
 	});
 

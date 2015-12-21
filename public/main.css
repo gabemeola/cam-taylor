@@ -25,7 +25,8 @@ a {
   width: 70%;
   margin: 0 auto;
   position: relative;
-  top: 8vh; }
+  top: 8vh;
+  z-index: 1; }
   .card-wrapper .card {
     width: 95%;
     margin: 0 auto;
@@ -40,11 +41,22 @@ a {
       background-image: url(./img/camtaylorBWSnow.jpg);
       background-repeat: no-repeat;
       background-size: cover;
-      background-position: bottom; }
+      background-position: bottom;
+      position: relative; }
     .card-wrapper .card .card-flexbox {
       display: flex;
       overflow: hidden;
-      margin-top: 1%; }
+      margin-top: 1%;
+      position: relative; }
+
+.card--expanded {
+  background-color: purple;
+  width: 70vw;
+  height: 50vh;
+  margin: 0 auto;
+  position: relative;
+  z-index: 0;
+  padding-top: 10vh; }
 
 card-content {
   text-align: center;

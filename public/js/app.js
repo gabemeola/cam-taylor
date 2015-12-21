@@ -9,7 +9,7 @@ angular.module("camtaylorApp", ["firebase", "ui.router", "ngMaterial", "ngAnimat
 	$stateProvider
 		.state('home', {
 			url: '/',
-			templateUrl: null,
+			templateUrl: './templates/_cameronbio.html',
 			controller: null,
 		})
 		.state("cameronbio", {
