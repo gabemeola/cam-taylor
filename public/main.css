@@ -82,7 +82,9 @@ div {
   padding: 0; }
 
 body {
-  overflow: hidden; }
+  overflow: hidden;
+  font-size: 100%;
+  line-height: 1.6875; }
 
 a {
   text-decoration: none;
@@ -105,6 +107,9 @@ a {
   position: relative;
   top: 8vh;
   z-index: 1; }
+  @media only screen and (max-device-width: 450px) {
+    .card-wrapper {
+      width: 95%; } }
   .card-wrapper .card {
     width: 95%;
     margin: 0 auto;
@@ -134,14 +139,19 @@ card-content {
   overflow: hidden; }
   card-content h1 {
     position: relative;
-    left: 10%;
+    left: 7%;
     font-family: "Parisienne", cursive;
-    font-size: 7vmin; }
+    font-size: 3em; }
+    @media only screen and (max-device-width: 450px) {
+      card-content h1 {
+        font-size: 6em;
+        color: blue;
+        line-height: 1.5em; } }
   card-content p {
     position: relative;
-    left: 10%;
-    font-size: 2.5vmin;
-    bottom: 30px; }
+    left: 7%;
+    font-size: 1.3em;
+    bottom: 2em; }
 
 .card--expanded {
   position: relative;
