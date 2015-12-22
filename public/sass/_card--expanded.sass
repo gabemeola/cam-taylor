@@ -6,27 +6,46 @@
 	position: relative
 	max-height: 0vh
 	overflow: hidden
-	background-color: gray
+	background-color: transparent
 	/*Transitional
 	.expanded-wrapper
-		background-color: darkgray
-		padding-top: 150vh
+		background-color: transparent
+		padding-top: 3000vh
 		width: 69vw
 		height: auto
 		margin: 0 auto
 		transition: $transition
 		position: relative
 		ui-view
-			.ui-content
-				padding: 0 6vw 3vw 6vw
+			&.ng-enter, &.ng-leave
+				position: relative
+				-webkit-transition: all .5s ease-in-out
+				-moz-transition: all .5s ease-in-out
+				-o-transition: all .5s ease-in-out
+				transition: all .5s ease-in-out
 .card--expanded-openanimtion
 	-webkit-animation: uiview-open 800ms linear both
 	animation: uiview-open 800ms linear both
 	opacity: 1
-	max-height: 50vh
-	height: 400px
+	max-height: 200vh
+	height: auto
+	overflow: show
 	.expanded-wrapper
 		padding-top: 10vh
 		ui-view
-			.ui-content
-				padding: 0 6vw 3vw 6vw
+			&.ng-enter, &.ng-leave
+				position: relative
+				-webkit-transition: all .5s ease-in-out
+				-moz-transition: all .5s ease-in-out
+				-o-transition: all .5s ease-in-out
+				transition: all .5s ease-in-out
+			&.ng-enter
+				color: transparent
+				background-color: white
+			&.ng-enter-active
+				color: currentColor
+			&.ng-leave
+				color: currentColor
+			&.ng-leave-active
+				color: transparent
+				background-color: white
