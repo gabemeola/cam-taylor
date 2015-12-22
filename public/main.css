@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Parisienne);
 .uiview-open {
   -webkit-animation: uiview-open 1200ms linear both;
   animation: uiview-open 1200ms linear both; }
@@ -93,7 +94,8 @@ a {
 .background {
   height: 100vh;
   width: 100vw;
-  background-color: gray; }
+  background-color: gray;
+  overflow: scroll; }
 
 .card-wrapper {
   background-color: #FFF;
@@ -125,6 +127,22 @@ a {
       margin-top: 1%;
       position: relative; }
 
+card-content {
+  text-align: center;
+  flex-basis: 80%;
+  position: relative;
+  overflow: hidden; }
+  card-content h1 {
+    position: relative;
+    left: 10%;
+    font-family: "Parisienne", cursive;
+    font-size: 7vmin; }
+  card-content p {
+    position: relative;
+    left: 10%;
+    font-size: 2.5vmin;
+    bottom: 30px; }
+
 .card--expanded {
   position: relative;
   z-index: 0;
@@ -133,34 +151,29 @@ a {
   position: relative;
   max-height: 0vh;
   overflow: hidden;
-  background-color: gray; }
+  background-color: gray;
+  /*Transitional */ }
   .card--expanded .expanded-wrapper {
     background-color: darkgray;
     padding-top: 150vh;
-    width: 70vw;
+    width: 69vw;
     height: auto;
     margin: 0 auto;
     transition: all 0.2s ease-in-out;
     position: relative; }
+    .card--expanded .expanded-wrapper ui-view .ui-content {
+      padding: 0 6vw 3vw 6vw; }
 
 .card--expanded-openanimtion {
   -webkit-animation: uiview-open 800ms linear both;
   animation: uiview-open 800ms linear both;
   opacity: 1;
-  max-height: 50vh; }
+  max-height: 50vh;
+  height: 400px; }
   .card--expanded-openanimtion .expanded-wrapper {
     padding-top: 10vh; }
-
-card-content {
-  text-align: center;
-  flex-basis: 80%;
-  position: relative; }
-  card-content h1 {
-    position: relative;
-    left: 10%; }
-  card-content p {
-    position: relative;
-    left: 10%; }
+    .card--expanded-openanimtion .expanded-wrapper ui-view .ui-content {
+      padding: 0 6vw 3vw 6vw; }
 
 .countdown {
   height: 18vh;

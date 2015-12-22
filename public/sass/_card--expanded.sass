@@ -1,0 +1,32 @@
+.card--expanded
+	position: relative
+	z-index: 0
+	opacity: 0
+	transition: $transition
+	position: relative
+	max-height: 0vh
+	overflow: hidden
+	background-color: gray
+	/*Transitional
+	.expanded-wrapper
+		background-color: darkgray
+		padding-top: 150vh
+		width: 69vw
+		height: auto
+		margin: 0 auto
+		transition: $transition
+		position: relative
+		ui-view
+			.ui-content
+				padding: 0 6vw 3vw 6vw
+.card--expanded-openanimtion
+	-webkit-animation: uiview-open 800ms linear both
+	animation: uiview-open 800ms linear both
+	opacity: 1
+	max-height: 50vh
+	height: 400px
+	.expanded-wrapper
+		padding-top: 10vh
+		ui-view
+			.ui-content
+				padding: 0 6vw 3vw 6vw
