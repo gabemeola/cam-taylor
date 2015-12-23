@@ -159,6 +159,11 @@ card-content {
     left: 7%;
     font-size: 1.3em;
     bottom: 2em; }
+    card-content p a {
+      text-transform: uppercase; }
+      card-content p a:hover {
+        color: #420c0e;
+        text-decoration: underline; }
 
 .card--expanded {
   position: relative;
@@ -216,10 +221,25 @@ card-content {
   width: auto;
   max-height: 200px;
   max-width: 200px;
-  background-color: gray;
   position: relative;
   flex-basis: 20%;
-  top: 1vh; }
+  top: 1vh;
+  position: relative; }
+  .countdown .countdown-img {
+    height: 100px;
+    width: 100px;
+    background-image: url(./img/lds-temple.svg);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: center center;
+    position: relative;
+    background-color: #C85A71;
+    border-radius: 80%; }
+    .countdown .countdown-img h2 {
+      color: #C85A71;
+      position: relative;
+      text-align: center;
+      top: 95%; }
 
 .cameron-bio {
   background-color: #939a76;
@@ -229,6 +249,18 @@ card-content {
 
 .taylor-bio {
   background-color: #C85A71;
+  padding: 3vh 8vw 4vh 8vw;
+  position: relative;
+  margin: -3vh 0 0 0; }
+
+.rsvp {
+  padding: 3vh 8vw 4vh 8vw;
+  position: relative;
+  margin: -3vh 0 0 0;
+  background-color: lightgray; }
+
+.location {
+  background-color: lightgray;
   padding: 3vh 8vw 4vh 8vw;
   position: relative;
   margin: -3vh 0 0 0; }

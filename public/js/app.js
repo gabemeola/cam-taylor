@@ -26,5 +26,10 @@ angular.module("camtaylorApp", ["firebase", "ui.router", "ngMaterial", "ngAnimat
 			url: "/rsvp",
 			templateUrl: "./templates/_rsvp.html",
 			controller: null,
-		});
+		})
+		.state("location", {
+			url: "/location",
+			templateUrl: "./templates/_location.html",
+			controller: null
+	});
 })

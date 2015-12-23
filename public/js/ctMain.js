@@ -18,4 +18,6 @@ angular.module("camtaylorApp")
 		}	
 	};
 	
+	$scope.guests = 0;
+	
 });

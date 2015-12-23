@@ -1,3 +1,40 @@
-<div class="">
+<div class="rsvp">
 	<h1>RSVP is working</h1>
+	
+	<form>
+		<div>
+			<md-input-container>
+				<label>First Name</label>
+				<input type="text" ng-required="true"/>
+			</md-input-container>
+		</div>
+		<div>
+			<md-input-container>
+				<label>Last Name</label>
+				<input type="text" ng-required="true"/>
+			</md-input-container>
+		</div>
+		<div>
+			<md-input-container>
+				<label>Email</label>
+				<input type="email" ng-required="true" ng-pattern="/^.+@.+\..+$/"/>
+			</md-input-container>
+		</div>
+		<div>
+			<md-input-container>
+				<label>Phone Number</label>
+				<input type="tel" ng-required="true" ng-pattern="/^([0-9]{3}) [0-9]{3}-[0-9]{4}$/" minlength="9"/>
+			</md-input-container>
+		</div>
+		<div>
+			<div>You + {{guests}}</div>
+			<md-slider flex md-discrete ng-model="guests" step="1" min="0" max="5"></md-slider>
+		</div>
+		<div>
+			<md-input-container>
+				<label>Message</label>
+				<textarea></textarea>
+			</md-input-container>
+		</div>
+	</form>
 </div>
