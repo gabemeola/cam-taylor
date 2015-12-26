@@ -9,6 +9,7 @@
 		<script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
 		<script src="node_modules/angularfire/dist/angularfire.js"></script>
 		<script src="node_modules/angular-material/angular-material.js"></script>
+		<script src="js/ng-map.min.js"></script>
 		<link rel="stylesheet" href="node_modules/angular-material/angular-material.css"/>
 		<link rel="stylesheet" href="main.css"/>
 	</head>
@@ -23,7 +24,7 @@
 						<div class="countdown">
 							<a ng-click="uiviewOpen(true)" href="#" ui-sref="location">
 								<div class="countdown-img">
-									<h2 id="countdown">... Days!</h2>
+									<h2 id="countdown">{{countdown}} Days!</h2>
 								</div>
 							</a>
 						</div>
@@ -37,5 +38,6 @@
 			</div>
 		</div>
 		<script src="bundle.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDEY2hjXNg9y0LyGxs4klbSgTFdsiwAxHE"></script>
 	</body>
 </html>

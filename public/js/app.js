@@ -1,4 +1,4 @@
-angular.module("camtaylorApp", ["firebase", "ui.router", "ngMaterial", "ngAnimate"])
+angular.module("camtaylorApp", ["firebase", "ui.router", "ngMaterial", "ngAnimate", "ngMap"])
 
 .constant("FIRE", {
 	url: ""
