@@ -265,4 +265,11 @@ card-content {
   position: relative;
   margin: -3vh 0 0 0; }
 
+.pictures {
+  background-color: transparent;
+  padding: 3vh 8vw 4vh 8vw;
+  position: relative;
+  margin: -3vh 0 0 0;
+  display: flex; }
+
 /*# sourceMappingURL=main.css.map */
