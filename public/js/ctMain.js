@@ -29,6 +29,7 @@ angular.module("camtaylorApp")
     		_hour = _minute * 60,
     		_day = _hour * 24,
     		timer;
+				showRemaining();
     function showRemaining() {
         var now = new Date();
         var distance = end - now;
