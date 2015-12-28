@@ -43,6 +43,4 @@ angular.module("camtaylorApp")
     }
 	}
 	
-	
-	$scope.rsvpGuests = 0;
 });

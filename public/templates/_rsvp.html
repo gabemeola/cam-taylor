@@ -1,41 +1,41 @@
-<div class="rsvp">
+<div class="rsvp" ng-controller="ctRsvp">
 	<h1>RSVP</h1>
 	
 	<form>
 		<div>
 			<md-input-container>
 				<label>First Name</label>
-				<input type="text" ng-required="true" ng-model="rsvpFirstName"/>
+				<input type="text" ng-required="true" ng-model="rsvp.firstname"/>
 			</md-input-container>
 		</div>
 		<div>
 			<md-input-container>
 				<label>Last Name</label>
-				<input type="text" ng-required="true" ng-model="rsvpLastName"/>
+				<input type="text" ng-required="true" ng-model="rsvp.lastname"/>
 			</md-input-container>
 		</div>
 		<div>
 			<md-input-container>
 				<label>Email</label>
-				<input type="email" ng-required="true" ng-pattern="/^.+@.+\..+$/" ng-model="rsvpEmail"/>
+				<input type="email" ng-required="true" ng-pattern="/^.+@.+\..+$/" ng-model="rsvp.email"/>
 			</md-input-container>
 		</div>
 		<div>
 			<md-input-container>
 				<label>Phone Number</label>
-				<input type="tel" ng-required="true" ng-pattern="/^([0-9]{3}) [0-9]{3}-[0-9]{4}$/" minlength="10" ng-model="rsvpTel"/>
+				<input type="tel" ng-required="true" minlength="10" ng-model="rsvp.tel"/>
 			</md-input-container>
 		</div>
 		<div>
-			<div>You + {{rsvpGuests}}</div>
-			<md-slider flex md-discrete ng-model="rsvpGuests" step="1" min="0" max="5"></md-slider>
+			<div>You + {{guests}}</div>
+			<md-slider flex md-discrete ng-model="guests" step="1" min="0" max="5"></md-slider>
 		</div>
 		<div>
 			<md-input-container>
 				<label>Message</label>
-				<textarea></textarea>
+				<textarea ng-model="rsvp.message"></textarea>
 			</md-input-container>
 		</div>
-		<md-button>RSVP</md-button>
+		<md-button ng-click="enterRsvp()">RSVP</md-button>
 	</form>
 </div>

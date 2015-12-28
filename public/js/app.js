@@ -1,7 +1,7 @@
 angular.module("camtaylorApp", ["firebase", "ui.router", "ngMaterial", "ngAnimate", "ngMap"])
 
 .constant("FIRE", {
-	url: ""
+	url: "https://taylor-cam.firebaseio.com/camtaylorApp/"
 })
 
 .config(function ($urlRouterProvider, $stateProvider) {
