@@ -103,7 +103,7 @@ a {
 .card-wrapper {
   background-color: #FFF;
   height: 80%;
-  width: 75%;
+  width: 80%;
   margin: 0 auto;
   position: relative;
   top: 8vh;
@@ -116,9 +116,9 @@ a {
       top: 2vh; } }
   @media only screen and (max-height: 450px) {
     .card-wrapper {
-      height: 120%;
-      background-color: blue;
-      top: 2vh; } }
+      height: 150%;
+      top: 2vh;
+      width: 90%; } }
   .card-wrapper .card {
     width: 95%;
     margin: 0 auto;
@@ -159,10 +159,10 @@ card-content {
     color: #404040; }
     card-content h1 a:nth-child(1):hover {
       color: #C85A71;
-      border-bottom: 5px solid #C85A71; }
+      border-bottom: 4px solid #C85A71; }
     card-content h1 a:nth-child(2):hover {
       color: #939a76;
-      border-bottom: 5px solid #939a76; }
+      border-bottom: 4px solid #939a76; }
     @media only screen and (max-width: 450px) {
       card-content h1 {
         font-size: 2em;
@@ -177,7 +177,7 @@ card-content {
         card-content h1 a:nth-child(2) {
           border-bottom: 3px solid #939a76; }
           card-content h1 a:nth-child(2):hover {
-            color: #C85A71;
+            color: #939a76;
             border-bottom: 3px solid #C85A71; } }
   card-content p {
     position: relative;
@@ -187,7 +187,7 @@ card-content {
     color: #404040; }
     card-content p a:hover {
       color: #420c0e;
-      border-bottom: 5px solid #420c0e; }
+      border-bottom: 3px solid #420c0e; }
     @media only screen and (max-width: 450px) {
       card-content p {
         font-size: 1em;
@@ -211,7 +211,7 @@ card-content {
   .card--expanded .expanded-wrapper {
     background-color: transparent;
     padding-top: 3000vh;
-    width: 75%;
+    width: 80%;
     height: auto;
     margin: 0 auto;
     transition: all 0.2s ease-in-out;
@@ -220,6 +220,9 @@ card-content {
     @media only screen and (max-width: 450px) {
       .card--expanded .expanded-wrapper {
         width: 95%; } }
+    @media only screen and (max-height: 450px) {
+      .card--expanded .expanded-wrapper {
+        width: 90%; } }
     .card--expanded .expanded-wrapper ui-view.ng-enter, .card--expanded .expanded-wrapper ui-view.ng-leave {
       position: relative;
       -webkit-transition: all 0.5s ease-in-out;
@@ -239,6 +242,9 @@ card-content {
     @media only screen and (max-width: 450px) {
       .card--expanded-openanimtion .expanded-wrapper {
         padding-top: 4vh; } }
+    @media only screen and (max-height: 450px) {
+      .card--expanded-openanimtion .expanded-wrapper {
+        padding-top: 2vh; } }
     .card--expanded-openanimtion .expanded-wrapper ui-view.ng-enter, .card--expanded-openanimtion .expanded-wrapper ui-view.ng-leave {
       position: relative;
       -webkit-transition: all 0.5s ease-in-out;
