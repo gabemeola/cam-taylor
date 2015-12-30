@@ -33,7 +33,7 @@
 		<div>
 			<md-input-container>
 				<label>Message</label>
-				<textarea ng-model="rsvp.message"></textarea>
+				<textarea ng-model="rsvp.message" ng-required="true"></textarea>
 			</md-input-container>
 		</div>
 		<md-button class="form-submit md-raised" ng-click="enterRsvp()">{{rsvpDone}}</md-button>

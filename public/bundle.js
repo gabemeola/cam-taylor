@@ -204,7 +204,7 @@
 				$scope.rsvp.tel =  " ";
 				$scope.guests = 0;
 				$scope.rsvp.message =  " ";
-				$scope.rsvpDone = "Thank you! See you soon!";
+				$scope.rsvpDone = "Thank you!";
 			}
 			
 			console.log(svRsvpForm.done);		

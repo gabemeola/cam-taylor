@@ -22,10 +22,9 @@
 					<div class="card-flexbox">
 						<card-content></card-content>
 						<div class="countdown">
-							<a ng-click="uiviewOpen(true)" href="#" ui-sref="location">
-								<div class="countdown-img">
-									<h2 id="countdown">{{countdown}} Days!</h2>
-								</div>
+							<h2 id="countdown">{{countdown}} Days!</h2>
+							<a ui-sref="location">
+								<md-button ng-click="uiviewOpen(true)"class="countdown-img md-raised" ng-click="uiviewOpen(true)"></md-button>
 							</a>
 						</div>
 					</div>

@@ -235,11 +235,12 @@ card-content {
     position: relative;
     background-color: #C85A71;
     border-radius: 80%; }
-    .countdown .countdown-img h2 {
-      color: #C85A71;
-      position: relative;
-      text-align: center;
-      top: 95%; }
+  .countdown h2 {
+    color: #C85A71;
+    position: relative;
+    text-align: center;
+    top: 3vh;
+    right: 2vw; }
 
 .cameron-bio {
   background-color: #939a76;
@@ -279,6 +280,8 @@ card-content {
   position: relative;
   margin: -3vh 0 0 0; }
   .location h1 {
+    padding: 0 8vw 0 8vw; }
+  .location p {
     padding: 0 8vw 0 8vw; }
 
 .pictures {
