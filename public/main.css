@@ -95,20 +95,29 @@ a {
     text-decoration: inherit; }
 
 .background {
-  height: 100vh;
+  min-height: 100vh;
+  height: 200vh;
   width: 100vw;
   background-color: white;
+  background-image: url(./img/chalkboard-background.jpg);
+  background-repeat: repeat;
+  background-size: cover;
+  overflow: visible; }
+
+.background-wrapper {
+  height: 100vh;
+  width: 100vw;
   overflow: visible; }
 
 .card-wrapper {
-  background-color: #FFF;
+  background-color: white;
   height: 80%;
   width: 80%;
   margin: 0 auto;
   position: relative;
   top: 8vh;
   z-index: 1;
-  box-shadow: 0px 0px 10px 3px #f2f2f2;
+  box-shadow: 0px 0px 10px 3px #333333;
   box-sizing: border-box; }
   @media only screen and (max-width: 450px) {
     .card-wrapper {
@@ -178,7 +187,7 @@ card-content {
           border-bottom: 3px solid #939a76; }
           card-content h1 a:nth-child(2):hover {
             color: #939a76;
-            border-bottom: 3px solid #C85A71; } }
+            border-bottom: 3px solid #939a76; } }
   card-content p {
     position: relative;
     left: 7%;
@@ -306,7 +315,7 @@ card-content {
   padding: 3vh 8vw 4vh 8vw;
   position: relative;
   margin: -3vh 0 0 0;
-  box-shadow: 0px 0px 10px 3px #f2f2f2; }
+  box-shadow: 0px 0px 10px 3px #333333; }
   @media only screen and (max-width: 450px) {
     .cameron-bio h1 {
       font-size: 1.6em; } }
@@ -319,7 +328,7 @@ card-content {
   padding: 3vh 8vw 4vh 8vw;
   position: relative;
   margin: -3vh 0 0 0;
-  box-shadow: 0px 0px 10px 3px #f2f2f2; }
+  box-shadow: 0px 0px 10px 3px #333333; }
   @media only screen and (max-width: 450px) {
     .taylor-bio h1 {
       font-size: 1.6em; } }
@@ -332,7 +341,7 @@ card-content {
   position: relative;
   margin: -3vh 0 0 0;
   background-color: lightgray;
-  box-shadow: 0px 0px 10px 3px #f2f2f2; }
+  box-shadow: 0px 0px 10px 3px #333333; }
   @media only screen and (max-width: 450px) {
     .rsvp h1 {
       font-size: 1.6em; } }
@@ -380,7 +389,7 @@ card-content {
   padding: 3vh 1vw 4vh 1vw;
   position: relative;
   margin: -3vh 0 0 0;
-  box-shadow: 0px 0px 10px 3px #f2f2f2; }
+  box-shadow: 0px 0px 10px 3px #333333; }
   .location h1 {
     padding: 0 8vw 0 8vw; }
     @media only screen and (max-width: 450px) {

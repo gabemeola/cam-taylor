@@ -37,23 +37,25 @@
 
 	<body data-ng-controller="ctMain">
 		<div class="background">
-			<div class="card-wrapper">
-				<div class="card">
-					<div class="cover-img"></div>
-					<div class="card-flexbox">
-						<card-content></card-content>
-						<div class="countdown">
-							<h2 id="countdown">{{countdown}} Days!</h2>
-							<a ui-sref="location">
-								<md-button ng-click="uiviewOpen(true)"class="countdown-img md-raised" ng-click="uiviewOpen(true)"></md-button>
-							</a>
+			<div class="background-wrapper">
+				<div class="card-wrapper">
+					<div class="card">
+						<div class="cover-img"></div>
+						<div class="card-flexbox">
+							<card-content></card-content>
+							<div class="countdown">
+								<h2 id="countdown">{{countdown}} Days!</h2>
+								<a ui-sref="location">
+									<md-button ng-click="uiviewOpen(true)"class="countdown-img md-raised" ng-click="uiviewOpen(true)"></md-button>
+								</a>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			<div class="card--expanded" id="card--expanded">
-				<div class="expanded-wrapper">
-					<ui-view></ui-view>
+				<div class="card--expanded" id="card--expanded">
+					<div class="expanded-wrapper">
+						<ui-view></ui-view>
+					</div>
 				</div>
 			</div>
 		</div>
