@@ -4,17 +4,44 @@
 	margin: -3vh 0 0 0
 	background-color: lightgray
 	box-shadow: $boxshadow
+	h1
+		@media only screen and (max-device-width: 450px)
+			font-size: 5em
+	label
+		@media only screen and (max-device-width: 450px)
+			font-size: 4em
+			top: 2vh
+	input
+		@media only screen and (max-device-width: 450px)
+			font-size: 4em
+			border-bottom: 3px solid gray
+	.message-label
+		@media only screen and (max-device-width: 450px)
+			font-size: 4em
+			top: 3vh
+	textarea
+		@media only screen and (max-device-width: 450px)
+			font-size: 4em
+			border-bottom: 3px solid gray
+			line-height: 1.7
+	.guest-slider
+		@media only screen and (max-device-width: 450px)
+			font-size: 3.5em
+	md-slider
+		@media only screen and (max-device-width: 450px)
+			.md-track
+				height: .8vh
 	.form-submit
 		display: inline-block
 		width: 20vw
 		background-color: #FFF
 		position: relative
 		color: $pink
-		font-size: 18px
+		font-size: 1.3em
 		&:not([disabled]):hover
 			background-color: #FFF
-	.rsvpDone
-		display: inline-block
-		float: right
-		h2
-			color: $pink
+		@media only screen and (max-device-width: 450px)
+			width: 100%
+			height: 5vh
+			margin-top: 5%
+			font-size: 4em

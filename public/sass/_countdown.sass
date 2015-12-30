@@ -7,6 +7,8 @@
 	flex-basis: 20%
 	top: 1vh
 	position: relative
+	@media only screen and (max-device-width: 450px)
+		flex-basis: 20%
 	.countdown-img
 		height: 100px
 		width: 100px
@@ -17,10 +19,21 @@
 		position: relative
 		background-color: $pink
 		border-radius: 80%
+		color: white
+		@media only screen and (max-device-width: 450px)
+			height: 200px
+			width: 200px
+			right: 0
+			top: 10vh
 	h2
 		color: $pink
 		position: relative
 		text-align: center
 		top: 3vh
 		right: 2vw
+		@media only screen and (max-device-width: 450px)
+			font-size: 2.5em
+			top: 18vh
+			display: inline
+			right: 17vw
 	

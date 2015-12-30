@@ -3,34 +3,44 @@ card-content
 	flex-basis: 80%
 	position: relative
 	overflow: hidden
+	@media only screen and (max-device-width: 450px)
+		flex-basis: 80%
 	h1
 		position: relative
 		left: 7%
 		font-family: 'Parisienne', cursive
 		font-size: 3em
+		color: $black
 		@media only screen and (max-device-width: 450px)
-			font-size: 6em
-			color: blue
-			line-height: 1.5em
+			font-size: 5.5em
+			line-height: 1.2em
+			left: 0
 			a
-				text-decoration: underline
+				&:nth-child(1)
+					border-bottom: 6px solid $pink
+				&:nth-child(2)
+					border-bottom: 6px solid $green
 		a
 			&:nth-child(1)
 				&:hover
 					color: $pink
+					border-bottom: 5px solid $pink
 			&:nth-child(2)
 				&:hover
 					color: $green
+					border-bottom: 5px solid $green
 	p
 		position: relative
 		left: 7%
 		font-size: 1.3em
 		bottom: 2em
+		color: $black
 		a
-			text-transform: uppercase
 			&:hover
 				color: $maroon
-				text-decoration: underline
+				border-bottom: 5px solid $maroon
 		@media only screen and (max-device-width: 450px)
-			
-			
+			font-size: 2.5em
+			bottom: 0
+			a
+				border-bottom: 5px solid $maroon

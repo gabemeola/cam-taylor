@@ -27,12 +27,12 @@
 			</md-input-container>
 		</div>
 		<div>
-			<div>You + {{guests}}</div>
+			<label class="guest-slider">You + {{guests}}</label>
 			<md-slider flex md-discrete ng-model="guests" step="1" min="0" max="5"></md-slider>
 		</div>
 		<div>
 			<md-input-container>
-				<label>Message</label>
+				<label class="message-label">Message</label>
 				<textarea ng-model="rsvp.message" ng-required="true"></textarea>
 			</md-input-container>
 		</div>

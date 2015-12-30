@@ -1,14 +1,16 @@
 .card-wrapper
 	background-color: #FFF
 	height: 80%
-	width: 70%
+	width: 75%
 	margin: 0 auto
 	position: relative
 	top: 8vh
 	z-index: 1
 	box-shadow: $boxshadow
+	box-sizing: border-box
 	@media only screen and (max-device-width: 450px)
 		width: 95%
+		top: 2vh
 	.card
 		width: 95%
 		margin: 0 auto
@@ -30,4 +32,6 @@
 			overflow: hidden
 			margin-top: 1%
 			position: relative
+			@media only screen and (max-device-width: 450px)
+				overflow: visible
 	
