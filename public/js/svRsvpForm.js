@@ -13,6 +13,7 @@ angular.module("camtaylorApp")
 			tel: tel,
 			guests: guests,
 			message: message
-		})
+		});
+		return this.done = true;
 	}
 });

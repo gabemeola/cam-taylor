@@ -258,6 +258,20 @@ card-content {
   position: relative;
   margin: -3vh 0 0 0;
   background-color: lightgray; }
+  .rsvp .form-submit {
+    display: inline-block;
+    width: 20vw;
+    background-color: #FFF;
+    position: relative;
+    color: #C85A71;
+    font-size: 18px; }
+    .rsvp .form-submit:not([disabled]):hover {
+      background-color: #FFF; }
+  .rsvp .rsvpDone {
+    display: inline-block;
+    float: right; }
+    .rsvp .rsvpDone h2 {
+      color: #C85A71; }
 
 .location {
   background-color: lightgray;
