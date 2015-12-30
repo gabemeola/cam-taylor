@@ -1,25 +1,16 @@
 card-content
 	text-align: center
-	flex-basis: 80%
+	width: 79%
 	position: relative
 	overflow: hidden
-	@media only screen and (max-device-width: 450px)
-		flex-basis: 80%
+	display: inline-block
+	@media only screen and (max-width: 450px)
 	h1
 		position: relative
 		left: 7%
 		font-family: 'Parisienne', cursive
 		font-size: 3em
 		color: $black
-		@media only screen and (max-device-width: 450px)
-			font-size: 5.5em
-			line-height: 1.2em
-			left: 0
-			a
-				&:nth-child(1)
-					border-bottom: 6px solid $pink
-				&:nth-child(2)
-					border-bottom: 6px solid $green
 		a
 			&:nth-child(1)
 				&:hover
@@ -29,6 +20,22 @@ card-content
 				&:hover
 					color: $green
 					border-bottom: 5px solid $green
+		@media only screen and (max-width: 450px)
+			font-size: 2em
+			line-height: 0.5em
+			left: 0
+			display: inline-block
+			a
+				&:nth-child(1)
+					border-bottom: 3px solid $pink
+					&:hover
+						color: $pink
+						border-bottom: 3px solid $pink
+				&:nth-child(2)
+					border-bottom: 3px solid $green
+					&:hover
+						color: $pink
+						border-bottom: 3px solid $pink
 	p
 		position: relative
 		left: 7%
@@ -39,8 +46,11 @@ card-content
 			&:hover
 				color: $maroon
 				border-bottom: 5px solid $maroon
-		@media only screen and (max-device-width: 450px)
-			font-size: 2.5em
+		@media only screen and (max-width: 450px)
+			font-size: 1em
 			bottom: 0
 			a
-				border-bottom: 5px solid $maroon
+				border-bottom: 2px solid $maroon
+				&:hover
+					color: $maroon
+					border-bottom: 2px solid $maroon

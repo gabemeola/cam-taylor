@@ -82,7 +82,7 @@ div {
   padding: 0; }
 
 body {
-  overflow: hidden;
+  overflow: visible;
   font-size: 100%;
   line-height: 1.6875; }
 
@@ -98,7 +98,7 @@ a {
   height: 100vh;
   width: 100vw;
   background-color: white;
-  overflow: scroll; }
+  overflow: visible; }
 
 .card-wrapper {
   background-color: #FFF;
@@ -110,9 +110,14 @@ a {
   z-index: 1;
   box-shadow: 0px 0px 10px 3px #f2f2f2;
   box-sizing: border-box; }
-  @media only screen and (max-device-width: 450px) {
+  @media only screen and (max-width: 450px) {
     .card-wrapper {
       width: 95%;
+      top: 2vh; } }
+  @media only screen and (max-height: 450px) {
+    .card-wrapper {
+      height: 120%;
+      background-color: blue;
       top: 2vh; } }
   .card-wrapper .card {
     width: 95%;
@@ -131,43 +136,49 @@ a {
       background-position: bottom;
       position: relative; }
     .card-wrapper .card .card-flexbox {
-      display: flex;
+      display: inline-block;
       overflow: hidden;
+      width: 100%;
       margin-top: 1%;
       position: relative; }
-      @media only screen and (max-device-width: 450px) {
+      @media only screen and (max-width: 450px) {
         .card-wrapper .card .card-flexbox {
           overflow: visible; } }
 
 card-content {
   text-align: center;
-  flex-basis: 80%;
+  width: 79%;
   position: relative;
-  overflow: hidden; }
-  @media only screen and (max-device-width: 450px) {
-    card-content {
-      flex-basis: 80%; } }
+  overflow: hidden;
+  display: inline-block; }
   card-content h1 {
     position: relative;
     left: 7%;
     font-family: "Parisienne", cursive;
     font-size: 3em;
     color: #404040; }
-    @media only screen and (max-device-width: 450px) {
-      card-content h1 {
-        font-size: 5.5em;
-        line-height: 1.2em;
-        left: 0; }
-        card-content h1 a:nth-child(1) {
-          border-bottom: 6px solid #C85A71; }
-        card-content h1 a:nth-child(2) {
-          border-bottom: 6px solid #939a76; } }
     card-content h1 a:nth-child(1):hover {
       color: #C85A71;
       border-bottom: 5px solid #C85A71; }
     card-content h1 a:nth-child(2):hover {
       color: #939a76;
       border-bottom: 5px solid #939a76; }
+    @media only screen and (max-width: 450px) {
+      card-content h1 {
+        font-size: 2em;
+        line-height: 0.5em;
+        left: 0;
+        display: inline-block; }
+        card-content h1 a:nth-child(1) {
+          border-bottom: 3px solid #C85A71; }
+          card-content h1 a:nth-child(1):hover {
+            color: #C85A71;
+            border-bottom: 3px solid #C85A71; }
+        card-content h1 a:nth-child(2) {
+          border-bottom: 3px solid #939a76; }
+          card-content h1 a:nth-child(2):hover {
+            color: #C85A71;
+            border-bottom: 3px solid #C85A71; } }
   card-content p {
     position: relative;
     left: 7%;
@@ -177,12 +188,15 @@ card-content {
     card-content p a:hover {
       color: #420c0e;
       border-bottom: 5px solid #420c0e; }
-    @media only screen and (max-device-width: 450px) {
+    @media only screen and (max-width: 450px) {
       card-content p {
-        font-size: 2.5em;
+        font-size: 1em;
         bottom: 0; }
         card-content p a {
-          border-bottom: 5px solid #420c0e; } }
+          border-bottom: 2px solid #420c0e; }
+          card-content p a:hover {
+            color: #420c0e;
+            border-bottom: 2px solid #420c0e; } }
 
 .card--expanded {
   position: relative;
@@ -203,7 +217,7 @@ card-content {
     transition: all 0.2s ease-in-out;
     position: relative;
     box-sizing: border-box; }
-    @media only screen and (max-device-width: 450px) {
+    @media only screen and (max-width: 450px) {
       .card--expanded .expanded-wrapper {
         width: 95%; } }
     .card--expanded .expanded-wrapper ui-view.ng-enter, .card--expanded .expanded-wrapper ui-view.ng-leave {
@@ -222,7 +236,7 @@ card-content {
   overflow: show; }
   .card--expanded-openanimtion .expanded-wrapper {
     padding-top: 10vh; }
-    @media only screen and (max-device-width: 450px) {
+    @media only screen and (max-width: 450px) {
       .card--expanded-openanimtion .expanded-wrapper {
         padding-top: 4vh; } }
     .card--expanded-openanimtion .expanded-wrapper ui-view.ng-enter, .card--expanded-openanimtion .expanded-wrapper ui-view.ng-leave {
@@ -244,16 +258,12 @@ card-content {
 
 .countdown {
   height: 18vh;
-  width: auto;
-  max-height: 200px;
-  max-width: 200px;
   position: relative;
-  flex-basis: 20%;
   top: 1vh;
-  position: relative; }
-  @media only screen and (max-device-width: 450px) {
-    .countdown {
-      flex-basis: 20%; } }
+  position: relative;
+  width: 20%;
+  display: inline-block;
+  float: right; }
   .countdown .countdown-img {
     height: 100px;
     width: 100px;
@@ -264,25 +274,26 @@ card-content {
     position: relative;
     background-color: #C85A71;
     border-radius: 80%;
-    color: white; }
-    @media only screen and (max-device-width: 450px) {
+    color: white;
+    float: right; }
+    @media only screen and (max-width: 450px) {
       .countdown .countdown-img {
-        height: 200px;
-        width: 200px;
-        right: 0;
-        top: 10vh; } }
+        height: 100px;
+        width: 100px;
+        left: 35%; } }
   .countdown h2 {
     color: #C85A71;
     position: relative;
     text-align: center;
     top: 3vh;
-    right: 2vw; }
-    @media only screen and (max-device-width: 450px) {
+    right: 2vw;
+    float: right; }
+    @media only screen and (max-width: 450px) {
       .countdown h2 {
-        font-size: 2.5em;
-        top: 18vh;
+        font-size: 1em;
+        top: 16.5vh;
         display: inline;
-        right: 17vw; } }
+        right: 25vw; } }
 
 .cameron-bio {
   background-color: #939a76;
@@ -290,12 +301,12 @@ card-content {
   position: relative;
   margin: -3vh 0 0 0;
   box-shadow: 0px 0px 10px 3px #f2f2f2; }
-  @media only screen and (max-device-width: 450px) {
+  @media only screen and (max-width: 450px) {
     .cameron-bio h1 {
-      font-size: 5em; } }
-  @media only screen and (max-device-width: 450px) {
+      font-size: 1.6em; } }
+  @media only screen and (max-width: 450px) {
     .cameron-bio p {
-      font-size: 2.5em; } }
+      font-size: 1em; } }
 
 .taylor-bio {
   background-color: #C85A71;
@@ -303,12 +314,12 @@ card-content {
   position: relative;
   margin: -3vh 0 0 0;
   box-shadow: 0px 0px 10px 3px #f2f2f2; }
-  @media only screen and (max-device-width: 450px) {
+  @media only screen and (max-width: 450px) {
     .taylor-bio h1 {
-      font-size: 5em; } }
-  @media only screen and (max-device-width: 450px) {
+      font-size: 1.6em; } }
+  @media only screen and (max-width: 450px) {
     .taylor-bio p {
-      font-size: 2.5em; } }
+      font-size: 1em; } }
 
 .rsvp {
   padding: 3vh 8vw 4vh 8vw;
@@ -316,30 +327,30 @@ card-content {
   margin: -3vh 0 0 0;
   background-color: lightgray;
   box-shadow: 0px 0px 10px 3px #f2f2f2; }
-  @media only screen and (max-device-width: 450px) {
+  @media only screen and (max-width: 450px) {
     .rsvp h1 {
-      font-size: 5em; } }
-  @media only screen and (max-device-width: 450px) {
+      font-size: 1.6em; } }
+  @media only screen and (max-width: 450px) {
     .rsvp label {
-      font-size: 4em;
-      top: 2vh; } }
-  @media only screen and (max-device-width: 450px) {
+      font-size: 1.4em;
+      top: 1vh; } }
+  @media only screen and (max-width: 450px) {
     .rsvp input {
-      font-size: 4em;
-      border-bottom: 3px solid gray; } }
-  @media only screen and (max-device-width: 450px) {
+      font-size: 1.4em;
+      border-bottom: 2px solid gray; } }
+  @media only screen and (max-width: 450px) {
     .rsvp .message-label {
-      font-size: 4em;
-      top: 3vh; } }
-  @media only screen and (max-device-width: 450px) {
+      font-size: 1.4em;
+      top: 1vh; } }
+  @media only screen and (max-width: 450px) {
     .rsvp textarea {
-      font-size: 4em;
+      font-size: 1.4em;
       border-bottom: 3px solid gray;
-      line-height: 1.7; } }
-  @media only screen and (max-device-width: 450px) {
+      line-height: 1.4; } }
+  @media only screen and (max-width: 450px) {
     .rsvp .guest-slider {
-      font-size: 3.5em; } }
-  @media only screen and (max-device-width: 450px) {
+      font-size: 1.4em; } }
+  @media only screen and (max-width: 450px) {
     .rsvp md-slider .md-track {
       height: 0.8vh; } }
   .rsvp .form-submit {
@@ -351,12 +362,12 @@ card-content {
     font-size: 1.3em; }
     .rsvp .form-submit:not([disabled]):hover {
       background-color: #FFF; }
-    @media only screen and (max-device-width: 450px) {
+    @media only screen and (max-width: 450px) {
       .rsvp .form-submit {
         width: 100%;
         height: 5vh;
         margin-top: 5%;
-        font-size: 4em; } }
+        font-size: 1.6em; } }
 
 .location {
   background-color: lightgray;
@@ -366,14 +377,14 @@ card-content {
   box-shadow: 0px 0px 10px 3px #f2f2f2; }
   .location h1 {
     padding: 0 8vw 0 8vw; }
-    @media only screen and (max-device-width: 450px) {
+    @media only screen and (max-width: 450px) {
       .location h1 {
-        font-size: 5em; } }
+        font-size: 1.6em; } }
   .location p {
     padding: 0 8vw 0 8vw; }
-    @media only screen and (max-device-width: 450px) {
+    @media only screen and (max-width: 450px) {
       .location p {
-        font-size: 2.5em; } }
+        font-size: 1em; } }
   .location .map ng-map {
     height: 30vh;
     height: 60vh; }

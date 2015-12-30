@@ -17,7 +17,7 @@
 		transition: $transition
 		position: relative
 		box-sizing: border-box
-		@media only screen and (max-device-width: 450px)
+		@media only screen and (max-width: 450px)
 			width: 95%
 		ui-view
 			&.ng-enter, &.ng-leave
@@ -35,7 +35,7 @@
 	overflow: show
 	.expanded-wrapper
 		padding-top: 10vh
-		@media only screen and (max-device-width: 450px)
+		@media only screen and (max-width: 450px)
 			padding-top: 4vh
 		ui-view
 			&.ng-enter, &.ng-leave

@@ -1,14 +1,12 @@
 .countdown
 	height: 18vh
-	width: auto
-	max-height: 200px
-	max-width: 200px
 	position: relative
-	flex-basis: 20%
 	top: 1vh
 	position: relative
-	@media only screen and (max-device-width: 450px)
-		flex-basis: 20%
+	width: 20%
+	display: inline-block
+	float: right
+	@media only screen and (max-width: 450px)
 	.countdown-img
 		height: 100px
 		width: 100px
@@ -20,20 +18,21 @@
 		background-color: $pink
 		border-radius: 80%
 		color: white
-		@media only screen and (max-device-width: 450px)
-			height: 200px
-			width: 200px
-			right: 0
-			top: 10vh
+		float: right
+		@media only screen and (max-width: 450px)
+			height: 100px
+			width: 100px
+			left: 35%
 	h2
 		color: $pink
 		position: relative
 		text-align: center
 		top: 3vh
 		right: 2vw
-		@media only screen and (max-device-width: 450px)
-			font-size: 2.5em
-			top: 18vh
+		float: right
+		@media only screen and (max-width: 450px)
+			font-size: 1em
+			top: 16.5vh
 			display: inline
-			right: 17vw
+			right: 25vw
 	

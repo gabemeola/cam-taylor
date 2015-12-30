@@ -8,8 +8,12 @@
 	z-index: 1
 	box-shadow: $boxshadow
 	box-sizing: border-box
-	@media only screen and (max-device-width: 450px)
+	@media only screen and (max-width: 450px)
 		width: 95%
+		top: 2vh
+	@media only screen and (max-height: 450px)
+		height: 120%
+		background-color: blue
 		top: 2vh
 	.card
 		width: 95%
@@ -28,10 +32,11 @@
 			background-position: bottom
 			position: relative
 		.card-flexbox
-			display: flex
+			display: inline-block
 			overflow: hidden
+			width: 100%
 			margin-top: 1%
 			position: relative
-			@media only screen and (max-device-width: 450px)
+			@media only screen and (max-width: 450px)
 				overflow: visible
 	
