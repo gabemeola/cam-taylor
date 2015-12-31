@@ -126,10 +126,8 @@
 		countdownClock();
 		
 		$scope.uiviewOpen = function(init) {
-			if(init){
-				$scope.uiview = true;
-				document.getElementById('card--expanded').setAttribute('class', 'card--expanded card--expanded-openanimtion');
-				}
+			$scope.uiview = true;
+			document.getElementById('card--expanded').setAttribute('class', 'card--expanded card--expanded-openanimtion');
 			};
 		
 		function countdownClock(){
