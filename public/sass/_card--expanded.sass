@@ -1,65 +1,48 @@
 .card--expanded-background
-	background-image: url(./img/chalkboard-background.jpg)
 	background-repeat: repeat
 	background-size: cover
 	transition: $transition
 .card--expanded
 	position: relative
 	z-index: 0
-	opacity: 0
 	transition: $transition
 	position: relative
-	max-height: 0vh
-	overflow: hidden
+	max-height: 200vh
+	overflow: show
 	background-color: transparent
 	/*Transitional
 	.expanded-wrapper
 		background-color: transparent
-		padding-top: 3000vh
 		width: 80%
 		height: auto
 		margin: 0 auto
 		transition: $transition
 		position: relative
 		box-sizing: border-box
-		@media only screen and (max-width: 450px)
-			width: 95%
-		@media only screen and (max-height: 450px)
-			width: 90%
-//		ui-view
-//			&.ng-enter, &.ng-leave
-//				position: relative
-//				-webkit-transition: all .5s ease-in-out
-//				-moz-transition: all .5s ease-in-out
-//				-o-transition: all .5s ease-in-out
-//				transition: all .5s ease-in-out
-.card--expanded-openanimtion
-	-webkit-animation: uiview-open 800ms linear both
-	animation: uiview-open 800ms linear both
-	opacity: 1
-	max-height: 200vh
-	height: auto
-	overflow: show
-	.expanded-wrapper
 		padding-top: 10vh
 		@media only screen and (max-width: 450px)
+			width: 95%
 			padding-top: 4vh
 		@media only screen and (max-height: 450px)
 			padding-top: 2vh
-//		ui-view
-//			&.ng-enter, &.ng-leave
-//				position: relative
-//				-webkit-transition: all .5s ease-in-out
-//				-moz-transition: all .5s ease-in-out
-//				-o-transition: all .5s ease-in-out
-//				transition: all .5s ease-in-out
-//			&.ng-enter
-//				color: transparent
-//				background-color: white
-//			&.ng-enter-active
-//				color: currentColor
-//			&.ng-leave
-//				color: currentColor
-//			&.ng-leave-active
-//				color: transparent
-//				background-color: white
+		ui-view
+			&.ng-enter, &.ng-leave
+				position: absolute
+				left: 0
+				right: 0
+				-webkit-transition: all .5s ease-in-out
+				-moz-transition: all .5s ease-in-out
+				-o-transition: all .5s ease-in-out
+				transition: all .5s ease-in-out
+			&.ng-enter
+				opacity: 0
+				-webkit-animation: bouncejs-uiview-enter 1100ms linear both
+				animation: bouncejs-uiview-enter 1100ms linear both 
+			&.ng-enter-active
+				opacity: 1
+			&.ng-leave
+				opacity: 1
+				-webkit-animation: bouncejs-uiview-leave 1100ms linear both
+				animation: bouncejs-uiview-leave 1100ms linear both 
+			&.ng-leave-active
+				opacity: 0

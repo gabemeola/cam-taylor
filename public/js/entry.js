@@ -14,3 +14,6 @@ require( '.\/svRsvpForm.js');
 
 //Factories
 //End of Factories
+
+//Addons
+require( '.\/smoothscroll.js');

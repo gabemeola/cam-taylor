@@ -1,11 +1,13 @@
 angular.module("camtaylorApp")
 .controller("ctMain", function($scope, $q){
 	countdownClock();
+	$scope.uiview = true;
 	
 	$scope.uiviewOpen = function(init) {
-		$scope.uiview = true;
-		document.getElementById('card--expanded').setAttribute('class', 'card--expanded card--expanded-openanimtion');
-		};
+		if($scope.uiview){
+			$scope.uiview = false;
+		}
+	};
 	
 	function countdownClock(){
 		var end = new Date('03/22/2016 10:1 AM'),
@@ -19,7 +21,7 @@ angular.module("camtaylorApp")
 			var distance = end - now;
 			if (distance < 0) {
 					clearInterval(timer);
-					document.getElementById('countdown').innerHTML = 'EXPIRED!';
+					document.getElementById('countdown').innerHTML = 'MARRIED!';
 					return;
 			}
 			var days = Math.floor(distance / _day),
@@ -27,7 +29,7 @@ angular.module("camtaylorApp")
 					minutes = Math.floor((distance % _hour) / _minute),
 					seconds = Math.floor((distance % _minute) / _second);
 			
-			$scope.countdown = days;
+			$scope.countdown = days + " Days!";
     }
 	}
 	

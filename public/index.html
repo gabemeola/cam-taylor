@@ -43,7 +43,7 @@
 					<div class="card-flexbox">
 						<card-content></card-content>
 						<div class="countdown">
-							<h2 id="countdown">{{countdown}} Days!</h2>
+							<h2 id="countdown">{{countdown}}</h2>
 							<a ui-sref="location">
 								<md-button ng-click="uiviewOpen(true)"class="countdown-img md-raised" ng-click="uiviewOpen()"></md-button>
 							</a>
@@ -52,11 +52,11 @@
 				</div>
 			</div>
 			<div class="card--expanded-background">
-			<div class="card--expanded" id="card--expanded">
-				<div class="expanded-wrapper">
-					<ui-view></ui-view>
+				<div class="card--expanded" id="card--expanded" ng-hide="uiview">
+					<div class="expanded-wrapper">
+						<ui-view></ui-view>
+					</div>
 				</div>
-			</div>
 			</div>
 		</div>
 		<script src="bundle.js"></script>

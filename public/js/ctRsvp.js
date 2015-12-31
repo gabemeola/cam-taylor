@@ -4,13 +4,6 @@ angular.module("camtaylorApp")
 	$scope.guests = 0;
 	$scope.rsvpDone = "RSVP";
 	
-	$scope.getRsvp = function(init){
-		if(init){
-			svRsvpForm.getRsvp("3852019950");
-			console.log("Function Ran");
-		}
-	};
-	
 	$scope.enterRsvp = function(){
 		console.log("enterRsvp Ran!");
 		
