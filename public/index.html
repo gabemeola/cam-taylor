@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html data-ng-app="camtaylorApp">	
+<!--
 	<head>
 		<title>Cam/Taylor</title>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.min.js"></script>
@@ -16,7 +17,7 @@
 		<meta name="MobileOptimized" content="320">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	</head>
-<!--
+-->
 	<head>
 		<title>Cam/Taylor</title>
 		<script src="node_modules/angular/angular.js"></script>
@@ -33,30 +34,29 @@
 		<meta name="MobileOptimized" content="320">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	</head>
--->
 
 	<body data-ng-controller="ctMain">
 		<div class="background">
-			<div class="background-wrapper">
-				<div class="card-wrapper">
-					<div class="card">
-						<div class="cover-img"></div>
-						<div class="card-flexbox">
-							<card-content></card-content>
-							<div class="countdown">
-								<h2 id="countdown">{{countdown}} Days!</h2>
-								<a ui-sref="location">
-									<md-button ng-click="uiviewOpen(true)"class="countdown-img md-raised" ng-click="uiviewOpen(true)"></md-button>
-								</a>
-							</div>
+			<div class="card-wrapper">
+				<div class="card">
+					<div class="cover-img"></div>
+					<div class="card-flexbox">
+						<card-content></card-content>
+						<div class="countdown">
+							<h2 id="countdown">{{countdown}} Days!</h2>
+							<a ui-sref="location">
+								<md-button ng-click="uiviewOpen(true)"class="countdown-img md-raised" ng-click="uiviewOpen()"></md-button>
+							</a>
 						</div>
 					</div>
 				</div>
-				<div class="card--expanded" id="card--expanded">
-					<div class="expanded-wrapper">
-						<ui-view></ui-view>
-					</div>
+			</div>
+			<div class="card--expanded-background">
+			<div class="card--expanded" id="card--expanded">
+				<div class="expanded-wrapper">
+					<ui-view></ui-view>
 				</div>
+			</div>
 			</div>
 		</div>
 		<script src="bundle.js"></script>

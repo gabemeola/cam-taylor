@@ -1,3 +1,8 @@
+.card--expanded-background
+	background-image: url(./img/chalkboard-background.jpg)
+	background-repeat: repeat
+	background-size: cover
+	transition: $transition
 .card--expanded
 	position: relative
 	z-index: 0
@@ -21,13 +26,13 @@
 			width: 95%
 		@media only screen and (max-height: 450px)
 			width: 90%
-		ui-view
-			&.ng-enter, &.ng-leave
-				position: relative
-				-webkit-transition: all .5s ease-in-out
-				-moz-transition: all .5s ease-in-out
-				-o-transition: all .5s ease-in-out
-				transition: all .5s ease-in-out
+//		ui-view
+//			&.ng-enter, &.ng-leave
+//				position: relative
+//				-webkit-transition: all .5s ease-in-out
+//				-moz-transition: all .5s ease-in-out
+//				-o-transition: all .5s ease-in-out
+//				transition: all .5s ease-in-out
 .card--expanded-openanimtion
 	-webkit-animation: uiview-open 800ms linear both
 	animation: uiview-open 800ms linear both
@@ -41,20 +46,20 @@
 			padding-top: 4vh
 		@media only screen and (max-height: 450px)
 			padding-top: 2vh
-		ui-view
-			&.ng-enter, &.ng-leave
-				position: relative
-				-webkit-transition: all .5s ease-in-out
-				-moz-transition: all .5s ease-in-out
-				-o-transition: all .5s ease-in-out
-				transition: all .5s ease-in-out
-			&.ng-enter
-				color: transparent
-				background-color: white
-			&.ng-enter-active
-				color: currentColor
-			&.ng-leave
-				color: currentColor
-			&.ng-leave-active
-				color: transparent
-				background-color: white
+//		ui-view
+//			&.ng-enter, &.ng-leave
+//				position: relative
+//				-webkit-transition: all .5s ease-in-out
+//				-moz-transition: all .5s ease-in-out
+//				-o-transition: all .5s ease-in-out
+//				transition: all .5s ease-in-out
+//			&.ng-enter
+//				color: transparent
+//				background-color: white
+//			&.ng-enter-active
+//				color: currentColor
+//			&.ng-leave
+//				color: currentColor
+//			&.ng-leave-active
+//				color: transparent
+//				background-color: white
