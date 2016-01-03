@@ -8,4 +8,14 @@ angular.module("camtaylorApp")
 	return {
 		templateUrl: "./templates/_pictures.html"
 	};
+})
+.directive("registryMaceys", function() {
+	return {
+		templateUrl: "./templates/_registry-maceys.html"
+	}
+})
+.directive("registryTarget", function() {
+	return {
+		templateUrl: "./templates/_registry-target.html"
+	}
 });

@@ -16,4 +16,3 @@ require( '.\/svRsvpForm.js');
 //End of Factories
 
 //Addons
-require( '.\/smoothscroll.js');

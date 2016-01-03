@@ -447,7 +447,8 @@ card-content {
   padding: 3vh 8vw 4vh 8vw;
   position: relative;
   margin: -3vh 0 0 0;
-  box-shadow: 0px 0px 10px 3px #333333; }
+  box-shadow: 0px 0px 10px 3px #333333;
+  margin-bottom: 60vh; }
   @media only screen and (max-width: 450px) {
     .cameron-bio h1 {
       font-size: 1.6em; } }
@@ -460,7 +461,8 @@ card-content {
   padding: 3vh 8vw 4vh 8vw;
   position: relative;
   margin: -3vh 0 0 0;
-  box-shadow: 0px 0px 10px 3px #333333; }
+  box-shadow: 0px 0px 10px 3px #333333;
+  margin-bottom: 60vh; }
   @media only screen and (max-width: 450px) {
     .taylor-bio h1 {
       font-size: 1.6em; } }
@@ -473,7 +475,8 @@ card-content {
   position: relative;
   margin: -3vh 0 0 0;
   background-color: lightgray;
-  box-shadow: 0px 0px 10px 3px #333333; }
+  box-shadow: 0px 0px 10px 3px #333333;
+  margin-bottom: 10vh; }
   @media only screen and (max-width: 450px) {
     .rsvp h1 {
       font-size: 1.6em; } }
@@ -521,7 +524,8 @@ card-content {
   padding: 3vh 1vw 4vh 1vw;
   position: relative;
   margin: -3vh 0 0 0;
-  box-shadow: 0px 0px 10px 3px #333333; }
+  box-shadow: 0px 0px 10px 3px #333333;
+  margin-bottom: 10vh; }
   .location h1 {
     padding: 0 8vw 0 8vw; }
     @media only screen and (max-width: 450px) {
@@ -542,5 +546,23 @@ card-content {
   position: relative;
   margin: -3vh 0 0 0;
   display: flex; }
+
+.registry {
+  background-color: lightgray;
+  padding: 3vh 8vw 4vh 8vw;
+  position: relative;
+  margin: -3vh 0 0 0;
+  box-shadow: 0px 0px 10px 3px #333333;
+  margin-bottom: 60vh; }
+  @media only screen and (max-width: 450px) {
+    .registry h1 {
+      font-size: 1.6em; } }
+  @media only screen and (max-width: 450px) {
+    .registry p {
+      font-size: 1em; } }
+
+.registry-image {
+  width: 100px;
+  height: 100px; }
 
 /*# sourceMappingURL=main.css.map */

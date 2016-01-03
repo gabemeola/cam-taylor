@@ -61,6 +61,9 @@
 	//Factories
 	//End of Factories
 
+	//Addons
+
+
 /***/ },
 /* 1 */
 /***/ function(module, exports) {
@@ -98,7 +101,12 @@
 				url: "/location",
 				templateUrl: "./templates/_location.html",
 				controller: null
-		});
+			})
+			.state("registry", {
+				url: "/registry",
+				templateUrl: "./templates/_registry.html",
+				controller: null
+			});
 	})
 
 /***/ },
@@ -115,6 +123,16 @@
 		return {
 			templateUrl: "./templates/_pictures.html"
 		};
+	})
+	.directive("registryMaceys", function() {
+		return {
+			templateUrl: "./templates/_registry-maceys.html"
+		}
+	})
+	.directive("registryTarget", function() {
+		return {
+			templateUrl: "./templates/_registry-target.html"
+		}
 	});
 
 /***/ },
