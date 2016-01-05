@@ -2,6 +2,7 @@ angular.module("camtaylorApp")
 .controller("ctMain", function($scope, $q){
 	countdownClock();
 	$scope.uiview = true;
+	$scope.release = true;
 	
 	$scope.uiviewOpen = function(init) {
 		if($scope.uiview){
@@ -42,9 +43,6 @@ angular.module("camtaylorApp")
 	}
 	
 	$scope.ngMapInit = function (){
-		console.log("ngMapInit");
-		setTimeout(function() {
-			$scope.ngMapShow = true;
-		}, 100);
+		$scope.ngMapShow = true;
 	}
 });

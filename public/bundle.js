@@ -158,6 +158,7 @@
 	.controller("ctMain", function($scope, $q){
 		countdownClock();
 		$scope.uiview = true;
+		$scope.release = true;
 		
 		$scope.uiviewOpen = function(init) {
 			if($scope.uiview){
@@ -198,10 +199,7 @@
 		}
 		
 		$scope.ngMapInit = function (){
-			console.log("ngMapInit");
-			setTimeout(function() {
-				$scope.ngMapShow = true;
-			}, 100);
+			$scope.ngMapShow = true;
 		}
 	});
 
