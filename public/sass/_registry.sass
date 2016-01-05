@@ -1,17 +1,64 @@
 .registry
 	background-color: lightgray
-	padding: 3vh 8vw 4vh 8vw
+	padding: 3vh 5vw 4vh 5vw
 	position: relative
 	margin: -3vh 0 0 0
 	/*box-shadow: $boxshadow
 	margin-bottom: 60vh
+	@media only screen and (max-width: 450px)
+		padding: 3vh 1vw 4vh 1vw
 	h1
 		@media only screen and (max-width: 450px)
 			font-size: 1.6em
 	p
 		@media only screen and (max-width: 450px)
 			font-size: 1em
-	
-.registry-image
-	width: 100px
-	height: 100px
+
+.registry-item
+	/*border: 2px solid $green
+	display: inline-block
+	width: 20vw
+	height: 30vw
+	overflow: hidden
+	transition: $transition
+	margin: 0 1vw 2vw 0
+	@media only screen and (max-width: 450px)
+		width: 40vw
+	.registry-image
+		width: 14vw
+		height: 14vw
+		margin: 0 auto
+		border: 2px solid $pink
+		&:hover
+			box-shadow: inset 0px 0px 3px $black
+		@media only screen and (max-width: 450px)
+			width: 34vw
+	.registry-title
+		position: relative
+		bottom: 1vh
+		color: $maroon
+		padding: 0 1vw 0 1vw
+	.registry-price
+		position: relative
+		bottom: 3vh
+		color: $black
+		padding: 0 1vw 0 1vw
+	.registry-quantity
+		position: relative
+		bottom: 3vh
+		color: $pink
+		padding: 0 1vw 0 1vw
+	.registry-buy
+		position: relative
+		bottom: 2.5vh
+		background-color: $green
+		width: 19vw
+		display: block
+		margin: 0 auto
+		text-align: center
+		text-transform: uppercase
+		transition: $transition
+		color: white
+		box-shadow: 0px 6px 10px 1px gray
+		&:hover
+			box-shadow: 0px 6px 10px 3px gray

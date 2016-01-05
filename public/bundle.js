@@ -188,7 +188,14 @@
 				$scope.countdown = days + " Days!";
 	    }
 		}
-		
+
+		if (screen.width < 450) {
+	    $scope.mobile = true;
+			console.log("mobile")
+		} else {
+			$scope.mobile = false;
+			console.log("not mobile")
+		}
 	});
 
 /***/ },

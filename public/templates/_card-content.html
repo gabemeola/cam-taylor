@@ -3,6 +3,7 @@
 		<a ng-click="uiviewOpen()" href="#ui-view" ui-sref="taylorbio">Taylor</a> and <a ng-click="uiviewOpen()" href="#" ui-sref="cameronbio">Cameron</a>
 	</h1>
 	<p>
-		<a ng-click="uiviewOpen()" href="#" ui-sref="rsvp">Join Us</a> in sealing the deal!
+		<p ng-hide="mobile"><a ng-click="uiviewOpen()" href="#" ui-sref="templebtn">Join Us</a> in sealing the deal!</p>
+		<p ng-show="mobile">Join Us in sealing the deal!</p>
 	</p>
 </div>
