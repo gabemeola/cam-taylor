@@ -35,7 +35,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	</head>
 
-	<body data-ng-controller="ctMain">
+	<body data-ng-controller="ctMain" ng-cloak>
 		<div class="background">
 			<div class="card-wrapper">
 				<div class="card">
@@ -44,8 +44,8 @@
 						<card-content></card-content>
 						<div class="countdown">
 							<h2 id="countdown">{{countdown}}</h2>
-							<a ui-sref="location">
-								<md-button ng-click="uiviewOpen(true)"class="countdown-img md-raised" ng-click="uiviewOpen()"></md-button>
+							<a ui-sref="templebtn">
+								<md-button ng-click="uiviewOpen(true)" class="countdown-img md-raised" ng-click="uiviewOpen()"></md-button>
 							</a>
 						</div>
 					</div>

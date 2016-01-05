@@ -12,7 +12,7 @@
 		width: 100px
 		background-image: url(./img/lds-temple.svg)
 		background-repeat: no-repeat
-		background-size: 80%
+		background-size: contain
 		background-position: center center
 		position: relative
 		background-color: $pink
@@ -23,6 +23,11 @@
 			height: 100px
 			width: 100px
 			left: 35%
+		@media only screen and (max-width: 330px)
+			height: 40px
+			width: 30px
+			border-radius: 20%
+			top: 20%
 	h2
 		color: $pink
 		position: relative
@@ -35,4 +40,6 @@
 			top: 16.5vh
 			display: inline
 			right: 25vw
+		@media only screen and (max-width: 380px)
+			font-size: 0.8em
 	

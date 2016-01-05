@@ -257,7 +257,7 @@ html {
 .card-wrapper {
   background-color: white;
   height: 80%;
-  width: 80%;
+  width: 80vw;
   margin: 0 auto;
   position: relative;
   top: 8vh;
@@ -266,13 +266,13 @@ html {
   box-sizing: border-box; }
   @media only screen and (max-width: 450px) {
     .card-wrapper {
-      width: 95%;
+      width: 95vw;
       top: 2vh; } }
   @media only screen and (max-height: 450px) {
     .card-wrapper {
       height: 150%;
       top: 2vh;
-      width: 90%; } }
+      width: 90vw; } }
   .card-wrapper .card {
     width: 95%;
     margin: 0 auto;
@@ -333,6 +333,10 @@ card-content {
           card-content h1 a:nth-child(2):hover {
             color: #939a76;
             border-bottom: 3px solid #939a76; } }
+  @media only screen and (max-width: 450px) and (max-width: 380px) {
+    card-content h1 {
+      font-size: 1.8em; } }
+
   card-content p {
     position: relative;
     left: 7%;
@@ -351,6 +355,9 @@ card-content {
           card-content p a:hover {
             color: #420c0e;
             border-bottom: 2px solid #420c0e; } }
+    @media only screen and (max-width: 380px) {
+      card-content p {
+        font-size: 0.8em; } }
 
 .card--expanded-background {
   background-repeat: repeat;
@@ -368,7 +375,7 @@ card-content {
   /*Transitional */ }
   .card--expanded .expanded-wrapper {
     background-color: transparent;
-    width: 80%;
+    width: 80vw;
     height: auto;
     margin: 0 auto;
     transition: all 0.2s ease-in-out;
@@ -377,7 +384,7 @@ card-content {
     padding-top: 10vh; }
     @media only screen and (max-width: 450px) {
       .card--expanded .expanded-wrapper {
-        width: 95%;
+        width: 95vw;
         padding-top: 4vh; } }
     @media only screen and (max-height: 450px) {
       .card--expanded .expanded-wrapper {
@@ -416,7 +423,7 @@ card-content {
     width: 100px;
     background-image: url(./img/lds-temple.svg);
     background-repeat: no-repeat;
-    background-size: 80%;
+    background-size: contain;
     background-position: center center;
     position: relative;
     background-color: #C85A71;
@@ -428,6 +435,12 @@ card-content {
         height: 100px;
         width: 100px;
         left: 35%; } }
+    @media only screen and (max-width: 330px) {
+      .countdown .countdown-img {
+        height: 40px;
+        width: 30px;
+        border-radius: 20%;
+        top: 20%; } }
   .countdown h2 {
     color: #C85A71;
     position: relative;
@@ -441,6 +454,9 @@ card-content {
         top: 16.5vh;
         display: inline;
         right: 25vw; } }
+    @media only screen and (max-width: 380px) {
+      .countdown h2 {
+        font-size: 0.8em; } }
 
 .cameron-bio {
   background-color: #939a76;
@@ -475,7 +491,7 @@ card-content {
   position: relative;
   margin: -3vh 0 0 0;
   background-color: lightgray;
-  box-shadow: 0px 0px 10px 3px #333333;
+  /*box-shadow: $boxshadow */
   margin-bottom: 10vh; }
   @media only screen and (max-width: 450px) {
     .rsvp h1 {
@@ -524,7 +540,7 @@ card-content {
   padding: 3vh 1vw 4vh 1vw;
   position: relative;
   margin: -3vh 0 0 0;
-  box-shadow: 0px 0px 10px 3px #333333;
+  /*box-shadow: $boxshadow */
   margin-bottom: 10vh; }
   .location h1 {
     padding: 0 8vw 0 8vw; }
@@ -552,7 +568,7 @@ card-content {
   padding: 3vh 8vw 4vh 8vw;
   position: relative;
   margin: -3vh 0 0 0;
-  box-shadow: 0px 0px 10px 3px #333333;
+  /*box-shadow: $boxshadow */
   margin-bottom: 60vh; }
   @media only screen and (max-width: 450px) {
     .registry h1 {
@@ -564,5 +580,21 @@ card-content {
 .registry-image {
   width: 100px;
   height: 100px; }
+
+.templebtn {
+  background-color: lightgray;
+  padding: 5vh 1vw 4vh 1vw;
+  position: relative;
+  margin: -3vh 0 0 0;
+  box-shadow: 0px 0px 10px 3px #333333;
+  margin-bottom: 60vh; }
+  @media only screen and (max-width: 450px) {
+    .templebtn h1 {
+      font-size: 1.6em; } }
+  @media only screen and (max-width: 450px) {
+    .templebtn p {
+      font-size: 1em; } }
+  .templebtn md-content {
+    background-color: lightgray; }
 
 /*# sourceMappingURL=main.css.map */

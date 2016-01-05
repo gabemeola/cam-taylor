@@ -9,6 +9,11 @@ angular.module("camtaylorApp")
 		templateUrl: "./templates/_pictures.html"
 	};
 })
+.directive("registry", function() {
+	return {
+		templateUrl: "./templates/_registry.html"
+	}
+})
 .directive("registryMaceys", function() {
 	return {
 		templateUrl: "./templates/_registry-maceys.html"
@@ -18,4 +23,14 @@ angular.module("camtaylorApp")
 	return {
 		templateUrl: "./templates/_registry-target.html"
 	}
-});
+})
+.directive("location", function() {
+	return {
+		templateUrl: "./templates/_location.html"
+	}
+})
+.directive("rsvp", function() {
+	return {
+		templateUrl: "./templates/_rsvp.html"
+	}
+})

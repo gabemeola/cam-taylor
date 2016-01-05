@@ -97,9 +97,9 @@
 				templateUrl: "./templates/_rsvp.html",
 				controller: null,
 			})
-			.state("location", {
-				url: "/location",
-				templateUrl: "./templates/_location.html",
+			.state("templebtn", {
+				url: "/temple",
+				templateUrl: "./templates/_templebtn.html",
 				controller: null
 			})
 			.state("registry", {
@@ -124,6 +124,11 @@
 			templateUrl: "./templates/_pictures.html"
 		};
 	})
+	.directive("registry", function() {
+		return {
+			templateUrl: "./templates/_registry.html"
+		}
+	})
 	.directive("registryMaceys", function() {
 		return {
 			templateUrl: "./templates/_registry-maceys.html"
@@ -133,7 +138,17 @@
 		return {
 			templateUrl: "./templates/_registry-target.html"
 		}
-	});
+	})
+	.directive("location", function() {
+		return {
+			templateUrl: "./templates/_location.html"
+		}
+	})
+	.directive("rsvp", function() {
+		return {
+			templateUrl: "./templates/_rsvp.html"
+		}
+	})
 
 /***/ },
 /* 3 */
