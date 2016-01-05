@@ -485,6 +485,10 @@ card-content {
       .countdown h2 {
         font-size: 1.2em;
         top: 16vh; } }
+    @media only screen and (min-width: 1376px) {
+      .countdown h2 {
+        top: 10vh;
+        right: 6vw; } }
 
 .cameron-bio {
   background-color: #939a76;
@@ -619,10 +623,17 @@ card-content {
   @media only screen and (max-width: 450px) {
     .registry-item {
       width: 40vw;
+      height: 400px; } }
+  @media only screen and (max-width: 380px) {
+    .registry-item {
+      width: 40vw;
       height: 300px; } }
   @media only screen and (max-height: 450px) {
     .registry-item {
       height: 300px; } }
+  @media only screen and (min-device-height: 1000px) {
+    .registry-item {
+      height: 40vh; } }
   .registry-item .registry-image {
     width: 14vw;
     height: 14vw;

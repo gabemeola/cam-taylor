@@ -196,6 +196,13 @@
 			$scope.mobile = false;
 			console.log("not mobile")
 		}
+		
+		$scope.ngMapInit = function (){
+			console.log("ngMapInit");
+			setTimeout(function() {
+				$scope.ngMapShow = true;
+			}, 100);
+		}
 	});
 
 /***/ },
