@@ -35,8 +35,23 @@ card-content
 					&:hover
 						color: $green
 						border-bottom: 3px solid $green
-			@media only screen and (max-width: 380px)
-				font-size: 1.8em
+		@media only screen and (max-width: 380px)
+			font-size: 1.8em
+		@media only screen and (max-height: 450px)
+			a
+				&:nth-child(1)
+					border-bottom: 3px solid $pink
+					&:hover
+						color: $pink
+						border-bottom: 3px solid $pink
+				&:nth-child(2)
+					border-bottom: 3px solid $green
+					&:hover
+						color: $green
+						border-bottom: 3px solid $green
+		@media only screen and (max-height: 330px)
+			font-size: 2.2em
+			line-height: 2.8em
 	p
 		position: relative
 		left: 7%
@@ -57,3 +72,5 @@ card-content
 					border-bottom: 2px solid $maroon
 		@media only screen and (max-width: 380px)
 			font-size: 0.8em
+		@media only screen and (max-height: 450px)
+			font-size: 1.2em

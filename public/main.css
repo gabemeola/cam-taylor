@@ -333,10 +333,24 @@ card-content {
           card-content h1 a:nth-child(2):hover {
             color: #939a76;
             border-bottom: 3px solid #939a76; } }
-  @media only screen and (max-width: 450px) and (max-width: 380px) {
-    card-content h1 {
-      font-size: 1.8em; } }
-
+    @media only screen and (max-width: 380px) {
+      card-content h1 {
+        font-size: 1.8em; } }
+    @media only screen and (max-height: 450px) {
+      card-content h1 a:nth-child(1) {
+        border-bottom: 3px solid #C85A71; }
+        card-content h1 a:nth-child(1):hover {
+          color: #C85A71;
+          border-bottom: 3px solid #C85A71; }
+      card-content h1 a:nth-child(2) {
+        border-bottom: 3px solid #939a76; }
+        card-content h1 a:nth-child(2):hover {
+          color: #939a76;
+          border-bottom: 3px solid #939a76; } }
+    @media only screen and (max-height: 330px) {
+      card-content h1 {
+        font-size: 2.2em;
+        line-height: 2.8em; } }
   card-content p {
     position: relative;
     left: 7%;
@@ -358,6 +372,9 @@ card-content {
     @media only screen and (max-width: 380px) {
       card-content p {
         font-size: 0.8em; } }
+    @media only screen and (max-height: 450px) {
+      card-content p {
+        font-size: 1.2em; } }
 
 .card--expanded-background {
   background-repeat: repeat;
@@ -388,7 +405,8 @@ card-content {
         padding-top: 4vh; } }
     @media only screen and (max-height: 450px) {
       .card--expanded .expanded-wrapper {
-        padding-top: 2vh; } }
+        padding-top: 2vh;
+        width: 90vw; } }
     .card--expanded .expanded-wrapper ui-view.ng-enter, .card--expanded .expanded-wrapper ui-view.ng-leave {
       position: absolute;
       left: 0;
@@ -441,6 +459,12 @@ card-content {
         width: 30px;
         border-radius: 20%;
         top: 20%; } }
+    @media only screen and (max-height: 330px) {
+      .countdown .countdown-img {
+        height: 40px;
+        width: 30px;
+        border-radius: 20%;
+        top: 80%; } }
   .countdown h2 {
     color: #C85A71;
     position: relative;
@@ -457,6 +481,10 @@ card-content {
     @media only screen and (max-width: 380px) {
       .countdown h2 {
         font-size: 0.8em; } }
+    @media only screen and (max-height: 330px) {
+      .countdown h2 {
+        font-size: 1.2em;
+        top: 16vh; } }
 
 .cameron-bio {
   background-color: #939a76;
@@ -591,7 +619,10 @@ card-content {
   @media only screen and (max-width: 450px) {
     .registry-item {
       width: 40vw;
-      height: 55vh; } }
+      height: 300px; } }
+  @media only screen and (max-height: 450px) {
+    .registry-item {
+      height: 300px; } }
   .registry-item .registry-image {
     width: 14vw;
     height: 14vw;
@@ -612,6 +643,9 @@ card-content {
     @media only screen and (max-width: 380px) {
       .registry-item .registry-title {
         font-size: 0.8em; } }
+    @media only screen and (max-height: 450px) {
+      .registry-item .registry-title {
+        font-size: 0.8em; } }
   .registry-item .registry-price {
     position: relative;
     bottom: 3vh;
@@ -621,6 +655,9 @@ card-content {
     @media only screen and (max-width: 380px) {
       .registry-item .registry-price {
         font-size: 0.8em; } }
+    @media only screen and (max-height: 450px) {
+      .registry-item .registry-price {
+        font-size: 0.8em; } }
   .registry-item .registry-quantity {
     position: relative;
     bottom: 3vh;
@@ -628,6 +665,9 @@ card-content {
     padding: 0 1vw 0 1vw;
     font-size: 1em; }
     @media only screen and (max-width: 380px) {
+      .registry-item .registry-quantity {
+        font-size: 0.8em; } }
+    @media only screen and (max-height: 450px) {
       .registry-item .registry-quantity {
         font-size: 0.8em; } }
   .registry-item .registry-buy {
@@ -646,6 +686,9 @@ card-content {
     @media only screen and (max-width: 380px) {
       .registry-item .registry-buy {
         font-size: 0.8em; } }
+    @media only screen and (max-height: 450px) {
+      .registry-item .registry-buy {
+        font-size: 0.8em; } }
     .registry-item .registry-buy:hover {
       box-shadow: 0px 6px 10px 3px gray; }
 
@@ -656,6 +699,9 @@ card-content {
   margin: -3vh 0 0 0;
   box-shadow: 0px 0px 10px 3px #333333;
   margin-bottom: 60vh; }
+  @media only screen and (max-height: 450px) {
+    .templebtn {
+      padding: 10vh 1vw 4vh 1vw; } }
   @media only screen and (max-width: 450px) {
     .templebtn h1 {
       font-size: 1.6em; } }
