@@ -18,12 +18,13 @@
 	/*border: 2px solid $green
 	display: inline-block
 	width: 20vw
-	height: 30vw
+	height: 50vh
 	overflow: hidden
 	transition: $transition
-	margin: 0 1vw 2vw 0
+	margin: 0 1vw 2vw 1vw
 	@media only screen and (max-width: 450px)
 		width: 40vw
+		height: 55vh
 	.registry-image
 		width: 14vw
 		height: 14vw
@@ -32,22 +33,32 @@
 		&:hover
 			box-shadow: inset 0px 0px 3px $black
 		@media only screen and (max-width: 450px)
-			width: 34vw
+			width: 38vw
+			height: 20vh
 	.registry-title
 		position: relative
 		bottom: 1vh
 		color: $maroon
 		padding: 0 1vw 0 1vw
+		font-size: 1em
+		@media only screen and (max-width: 380px)
+			font-size: 0.8em
 	.registry-price
 		position: relative
 		bottom: 3vh
 		color: $black
 		padding: 0 1vw 0 1vw
+		font-size: 1em
+		@media only screen and (max-width: 380px)
+			font-size: 0.8em
 	.registry-quantity
 		position: relative
 		bottom: 3vh
 		color: $pink
 		padding: 0 1vw 0 1vw
+		font-size: 1em
+		@media only screen and (max-width: 380px)
+			font-size: 0.8em
 	.registry-buy
 		position: relative
 		bottom: 2.5vh
@@ -60,5 +71,8 @@
 		transition: $transition
 		color: white
 		box-shadow: 0px 6px 10px 1px gray
+		font-size: 1em
+		@media only screen and (max-width: 380px)
+			font-size: 0.8em
 		&:hover
 			box-shadow: 0px 6px 10px 3px gray

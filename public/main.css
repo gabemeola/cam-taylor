@@ -584,13 +584,14 @@ card-content {
   /*border: 2px solid $green */
   display: inline-block;
   width: 20vw;
-  height: 30vw;
+  height: 50vh;
   overflow: hidden;
   transition: all 0.2s ease-in-out;
-  margin: 0 1vw 2vw 0; }
+  margin: 0 1vw 2vw 1vw; }
   @media only screen and (max-width: 450px) {
     .registry-item {
-      width: 40vw; } }
+      width: 40vw;
+      height: 55vh; } }
   .registry-item .registry-image {
     width: 14vw;
     height: 14vw;
@@ -600,22 +601,35 @@ card-content {
       box-shadow: inset 0px 0px 3px #404040; }
     @media only screen and (max-width: 450px) {
       .registry-item .registry-image {
-        width: 34vw; } }
+        width: 38vw;
+        height: 20vh; } }
   .registry-item .registry-title {
     position: relative;
     bottom: 1vh;
     color: #420c0e;
-    padding: 0 1vw 0 1vw; }
+    padding: 0 1vw 0 1vw;
+    font-size: 1em; }
+    @media only screen and (max-width: 380px) {
+      .registry-item .registry-title {
+        font-size: 0.8em; } }
   .registry-item .registry-price {
     position: relative;
     bottom: 3vh;
     color: #404040;
-    padding: 0 1vw 0 1vw; }
+    padding: 0 1vw 0 1vw;
+    font-size: 1em; }
+    @media only screen and (max-width: 380px) {
+      .registry-item .registry-price {
+        font-size: 0.8em; } }
   .registry-item .registry-quantity {
     position: relative;
     bottom: 3vh;
     color: #C85A71;
-    padding: 0 1vw 0 1vw; }
+    padding: 0 1vw 0 1vw;
+    font-size: 1em; }
+    @media only screen and (max-width: 380px) {
+      .registry-item .registry-quantity {
+        font-size: 0.8em; } }
   .registry-item .registry-buy {
     position: relative;
     bottom: 2.5vh;
@@ -627,7 +641,11 @@ card-content {
     text-transform: uppercase;
     transition: all 0.2s ease-in-out;
     color: white;
-    box-shadow: 0px 6px 10px 1px gray; }
+    box-shadow: 0px 6px 10px 1px gray;
+    font-size: 1em; }
+    @media only screen and (max-width: 380px) {
+      .registry-item .registry-buy {
+        font-size: 0.8em; } }
     .registry-item .registry-buy:hover {
       box-shadow: 0px 6px 10px 3px gray; }
 
