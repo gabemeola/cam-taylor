@@ -6,13 +6,15 @@ require( '.\/Directives.js');
 //Controllers
 require( '.\/ctMain.js');
 require( '.\/ctRsvp.js');
+require( '.\/ctAdmin.js');
 //End Of Controllers
 
 //Services
-require( '.\/svRsvpForm.js');
+require( '.\/svAdminLogin.js');
 //End Services
 
 //Factories
+require( '.\/ftAuth.js');
 //End of Factories
 
 //Addons

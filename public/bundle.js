@@ -52,13 +52,15 @@
 	//Controllers
 	__webpack_require__( 3);
 	__webpack_require__( 4);
+	__webpack_require__( 5);
 	//End Of Controllers
 
 	//Services
-	__webpack_require__( 5);
+	__webpack_require__( 6);
 	//End Services
 
 	//Factories
+	__webpack_require__( 7);
 	//End of Factories
 
 	//Addons
@@ -149,6 +151,17 @@
 			templateUrl: "./templates/_rsvp.html"
 		}
 	})
+	.directive("admin-login", function() {
+		return {
+			templateUrl: "./templates/_admin-login.html"
+		}
+	})
+	.directive("admin-main", function() {
+		return {
+			templateUrl: "./templates/_admin-main.html"
+		}
+	});
+
 
 /***/ },
 /* 3 */
@@ -158,7 +171,6 @@
 	.controller("ctMain", function($scope, $q){
 		countdownClock();
 		$scope.uiview = true;
-		$scope.release = true;
 		
 		$scope.uiviewOpen = function(init) {
 			if($scope.uiview){
@@ -245,23 +257,27 @@
 /***/ function(module, exports) {
 
 	angular.module("camtaylorApp")
-	.service("svRsvpForm", function($q, FIRE, $firebaseObject) {
+	.controller("ctAdmin", function($scope) {
 		
-		this.postRsvp = function(firstName, lastName, email, tel, guests, message) {
-			var defer = $q.defer(),
-					ref = new Firebase(FIRE.url + "rsvps/" + tel + "/");
-			console.warn(firstName, lastName, email, tel, guests, message);
-			
-			ref.set({
-				firstName: firstName,
-				lastName: lastName,
-				email: email,
-				tel: tel,
-				guests: guests,
-				message: message
-			});
-			return this.done = true;
-		}
+	});
+
+/***/ },
+/* 6 */
+/***/ function(module, exports) {
+
+	angular.controller("camtaylorApp")
+	.service("svAdminLogin", function ($q) {
+		
+	});
+
+/***/ },
+/* 7 */
+/***/ function(module, exports) {
+
+	angular.module("nApp")
+	.factory("ftAuth", function($q, $firebaseAuth, FIRE){
+		var ref = new Firebase(FIRE.url);
+	  return $firebaseAuth(ref);
 	});
 
 /***/ }

@@ -2,7 +2,6 @@ angular.module("camtaylorApp")
 .controller("ctMain", function($scope, $q){
 	countdownClock();
 	$scope.uiview = true;
-	$scope.release = true;
 	
 	$scope.uiviewOpen = function(init) {
 		if($scope.uiview){

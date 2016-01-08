@@ -525,9 +525,11 @@ card-content {
   background-color: lightgray;
   /*box-shadow: $boxshadow */
   margin-bottom: 10vh; }
-  @media only screen and (max-width: 450px) {
-    .rsvp h1 {
-      font-size: 1.6em; } }
+  .rsvp h1 {
+    font-family: "Parisienne", cursive; }
+    @media only screen and (max-width: 450px) {
+      .rsvp h1 {
+        font-size: 1.6em; } }
   @media only screen and (max-width: 450px) {
     .rsvp label {
       font-size: 1.4em;
@@ -575,7 +577,8 @@ card-content {
   /*box-shadow: $boxshadow */
   margin-bottom: 10vh; }
   .location h1 {
-    padding: 0 8vw 0 8vw; }
+    padding: 0 8vw 0 8vw;
+    font-family: "Parisienne", cursive; }
     @media only screen and (max-width: 450px) {
       .location h1 {
         font-size: 1.6em; } }
@@ -605,9 +608,15 @@ card-content {
   @media only screen and (max-width: 450px) {
     .registry {
       padding: 3vh 1vw 4vh 1vw; } }
-  @media only screen and (max-width: 450px) {
-    .registry h1 {
-      font-size: 1.6em; } }
+  .registry h1 {
+    padding: 0 3vw 0 3vw;
+    font-family: "Parisienne", cursive; }
+    @media only screen and (max-width: 450px) {
+      .registry h1 {
+        font-size: 1.6em; } }
+    @media only screen and (max-width: 450px) {
+      .registry h1 {
+        padding: 0 3vw 0 3vw; } }
   @media only screen and (max-width: 450px) {
     .registry p {
       font-size: 1em; } }
