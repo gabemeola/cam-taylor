@@ -34,12 +34,12 @@ angular.module("camtaylorApp")
 		templateUrl: "./templates/_rsvp.html"
 	}
 })
-.directive("admin-login", function() {
+.directive("adminLogin", function() {
 	return {
 		templateUrl: "./templates/_admin-login.html"
 	}
 })
-.directive("admin-main", function() {
+.directive("adminMain", function() {
 	return {
 		templateUrl: "./templates/_admin-main.html"
 	}

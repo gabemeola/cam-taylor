@@ -151,12 +151,12 @@
 			templateUrl: "./templates/_rsvp.html"
 		}
 	})
-	.directive("admin-login", function() {
+	.directive("adminLogin", function() {
 		return {
 			templateUrl: "./templates/_admin-login.html"
 		}
 	})
-	.directive("admin-main", function() {
+	.directive("adminMain", function() {
 		return {
 			templateUrl: "./templates/_admin-main.html"
 		}
@@ -257,24 +257,44 @@
 /***/ function(module, exports) {
 
 	angular.module("camtaylorApp")
-	.controller("ctAdmin", function($scope) {
+	.controller("ctAdmin", function($scope, svAdminLogin, ftAuth) {
 		
+		$scope.adminLogin = function() {
+			var username = $scope.admin.username,
+					password = $scope.admin.password;
+			svAdminLogin.adminLogin(username, password);
+		}
+		$scope.authData = false;
+		ftAuth.$onAuth(function(authData){
+			$scope.authData = authData;
+		});
 	});
 
 /***/ },
 /* 6 */
 /***/ function(module, exports) {
 
-	angular.controller("camtaylorApp")
-	.service("svAdminLogin", function ($q) {
+	angular.module("camtaylorApp")
+	.service("svAdminLogin", function (FIRE, $q, $firebaseAuth, ftAuth) {
+		var defer = $q.defer();
 		
+		this.adminLogin = function(email, password){
+			ftAuth.$authWithPassword({
+				email: email,
+				password: password
+			}).then(function(userData){
+				console.log("Logged in as: "  + userData.password.email + " " + userData.uid);
+			}).catch(function(error){
+				console.warn("Authentication failed:" + error);
+			})
+		}
 	});
 
 /***/ },
 /* 7 */
 /***/ function(module, exports) {
 
-	angular.module("nApp")
+	angular.module("camtaylorApp")
 	.factory("ftAuth", function($q, $firebaseAuth, FIRE){
 		var ref = new Firebase(FIRE.url);
 	  return $firebaseAuth(ref);

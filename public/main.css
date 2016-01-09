@@ -731,4 +731,19 @@ card-content {
   .templebtn md-content {
     background-color: lightgray; }
 
+h1 {
+  padding: 3vh 8vw 0 8vw; }
+
+admin-login {
+  position: relative; }
+  admin-login div {
+    display: block;
+    padding: 3vh 8vw 4vh 8vw; }
+    admin-login div .login-submit {
+      width: 20vw;
+      background-color: #FFF;
+      position: relative;
+      color: #C85A71;
+      font-size: 1.3em; }
+
 /*# sourceMappingURL=main.css.map */
