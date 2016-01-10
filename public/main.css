@@ -567,14 +567,14 @@ card-content {
     position: relative;
     color: #C85A71;
     font-size: 1.3em; }
-    .rsvp .form-submit:not([disabled]):hover {
-      background-color: #FFF; }
     @media only screen and (max-width: 450px) {
       .rsvp .form-submit {
         width: 100%;
         height: 5vh;
         margin-top: 5%;
-        font-size: 1.6em; } }
+        font-size: 1.6em; }
+        .rsvp .form-submit:not([disabled]):hover {
+          background-color: #FFF; } }
 
 .location {
   background-color: lightgray;
@@ -747,6 +747,10 @@ card-content {
       font-size: 1em; } }
   .templebtn md-content {
     background-color: lightgray; }
+    .templebtn md-content md-tabs md-ink-bar {
+      background-color: #420c0e; }
+    .templebtn md-content md-tabs .tab-label {
+      color: #C85A71; }
 
 admin-login {
   position: relative; }
