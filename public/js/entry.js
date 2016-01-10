@@ -19,3 +19,4 @@ require( '.\/ftAuth.js');
 //End of Factories
 
 //Addons
+require( '.\/ng-map.min.js');

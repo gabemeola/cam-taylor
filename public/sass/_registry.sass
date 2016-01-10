@@ -8,12 +8,22 @@
 	@media only screen and (max-width: 450px)
 		padding: 3vh 1vw 4vh 1vw
 	h1
+		font-size: 2.2em
 		padding: 0 3vw 0 3vw
 		font-family: 'Parisienne', cursive
 		@media only screen and (max-width: 450px)
-			font-size: 1.6em
+			font-size: 2em
 		@media only screen and (max-width: 450px)
 			padding: 0 3vw 0 3vw
+		a
+			&:nth-child(1)
+				border-bottom: 4px solid $target-white
+				&:hover
+					color: darkgray
+			&:nth-child(2)
+				border-bottom: 4px solid $maceys-red
+				&:hover
+					color: darkgray
 	p
 		@media only screen and (max-width: 450px)
 			font-size: 1em

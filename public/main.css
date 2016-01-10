@@ -497,9 +497,12 @@ card-content {
   margin: -3vh 0 0 0;
   box-shadow: 0px 0px 10px 3px #333333;
   margin-bottom: 60vh; }
-  @media only screen and (max-width: 450px) {
-    .cameron-bio h1 {
-      font-size: 1.6em; } }
+  .cameron-bio h1 {
+    font-size: 2.2em;
+    font-family: "Parisienne", cursive; }
+    @media only screen and (max-width: 450px) {
+      .cameron-bio h1 {
+        font-size: 2em; } }
   @media only screen and (max-width: 450px) {
     .cameron-bio p {
       font-size: 1em; } }
@@ -511,9 +514,12 @@ card-content {
   margin: -3vh 0 0 0;
   box-shadow: 0px 0px 10px 3px #333333;
   margin-bottom: 60vh; }
-  @media only screen and (max-width: 450px) {
-    .taylor-bio h1 {
-      font-size: 1.6em; } }
+  .taylor-bio h1 {
+    font-size: 2.2em;
+    font-family: "Parisienne", cursive; }
+    @media only screen and (max-width: 450px) {
+      .taylor-bio h1 {
+        font-size: 2em; } }
   @media only screen and (max-width: 450px) {
     .taylor-bio p {
       font-size: 1em; } }
@@ -526,10 +532,11 @@ card-content {
   /*box-shadow: $boxshadow */
   margin-bottom: 10vh; }
   .rsvp h1 {
+    font-size: 2.2em;
     font-family: "Parisienne", cursive; }
     @media only screen and (max-width: 450px) {
       .rsvp h1 {
-        font-size: 1.6em; } }
+        font-size: 2em; } }
   @media only screen and (max-width: 450px) {
     .rsvp label {
       font-size: 1.4em;
@@ -577,11 +584,12 @@ card-content {
   /*box-shadow: $boxshadow */
   margin-bottom: 10vh; }
   .location h1 {
+    font-size: 2.2em;
     padding: 0 8vw 0 8vw;
     font-family: "Parisienne", cursive; }
     @media only screen and (max-width: 450px) {
       .location h1 {
-        font-size: 1.6em; } }
+        font-size: 2em; } }
   .location p {
     padding: 0 8vw 0 8vw; }
     @media only screen and (max-width: 450px) {
@@ -609,14 +617,23 @@ card-content {
     .registry {
       padding: 3vh 1vw 4vh 1vw; } }
   .registry h1 {
+    font-size: 2.2em;
     padding: 0 3vw 0 3vw;
     font-family: "Parisienne", cursive; }
     @media only screen and (max-width: 450px) {
       .registry h1 {
-        font-size: 1.6em; } }
+        font-size: 2em; } }
     @media only screen and (max-width: 450px) {
       .registry h1 {
         padding: 0 3vw 0 3vw; } }
+    .registry h1 a:nth-child(1) {
+      border-bottom: 4px solid white; }
+      .registry h1 a:nth-child(1):hover {
+        color: darkgray; }
+    .registry h1 a:nth-child(2) {
+      border-bottom: 4px solid #d23330; }
+      .registry h1 a:nth-child(2):hover {
+        color: darkgray; }
   @media only screen and (max-width: 450px) {
     .registry p {
       font-size: 1em; } }
