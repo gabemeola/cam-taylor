@@ -1,5 +1,5 @@
 angular.module("camtaylorApp")
-.controller("ctMain", function($scope, $q){
+.controller("ctMain", ["$scope", "$q", function($scope, $q){
 	countdownClock();
 	$scope.uiview = true;
 	
@@ -24,10 +24,10 @@ angular.module("camtaylorApp")
 					document.getElementById('countdown').innerHTML = 'MARRIED!';
 					return;
 			}
-			var days = Math.floor(distance / _day),
-					hours = Math.floor((distance % _day) / _hour),
-					minutes = Math.floor((distance % _hour) / _minute),
-					seconds = Math.floor((distance % _minute) / _second);
+			var days = Math.floor(distance / _day);
+//					hours = Math.floor((distance % _day) / _hour),
+//					minutes = Math.floor((distance % _hour) / _minute),
+//					seconds = Math.floor((distance % _minute) / _second);
 			
 			$scope.countdown = days + " Days!";
     }
@@ -44,4 +44,4 @@ angular.module("camtaylorApp")
 	$scope.ngMapInit = function (){
 		$scope.ngMapShow = true;
 	}
-});
+}]);

@@ -1,5 +1,5 @@
 angular.module("camtaylorApp")
-.controller("ctAdmin", function($scope, svAdminLogin, ftAuth) {
+.controller("ctAdmin", ["$scope", "svAdminLogin", "ftAuth", function($scope, svAdminLogin, ftAuth) {
 	
 	$scope.adminLogin = function() {
 		var username = $scope.admin.username,
@@ -10,4 +10,4 @@ angular.module("camtaylorApp")
 	ftAuth.$onAuth(function(authData) {
 		$scope.authData = authData;
 	});
-});
+}]);

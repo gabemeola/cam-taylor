@@ -1,5 +1,5 @@
 angular.module("camtaylorApp")
-.controller("ctRsvp", function($scope, svRsvpForm){
+.controller("ctRsvp", ["$scope", "svRsvpForm", function($scope, svRsvpForm){
 	
 	$scope.guests = 0;
 	$scope.rsvpDone = "RSVP";
@@ -29,4 +29,4 @@ angular.module("camtaylorApp")
 		console.log(svRsvpForm.done);		
 	}
 	
-});
+}]);

@@ -4,7 +4,7 @@ angular.module("camtaylorApp", ["firebase", "ui.router", "ngMaterial", "ngAnimat
 	url: "https://taylor-cam.firebaseio.com/camtaylorApp/"
 })
 
-.config(function ($urlRouterProvider, $stateProvider) {
+.config(["$urlRouterProvider", "$stateProvider", function ($urlRouterProvider, $stateProvider) {
 	$urlRouterProvider.otherwise("/");
 	$stateProvider
 		.state('home', {
@@ -37,4 +37,4 @@ angular.module("camtaylorApp", ["firebase", "ui.router", "ngMaterial", "ngAnimat
 			templateUrl: "./templates/_registry.html",
 			controller: null
 		});
-})
+}]);

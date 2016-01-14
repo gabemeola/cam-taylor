@@ -1,6 +1,5 @@
 angular.module("camtaylorApp")
-.service("svAdminLogin", function (FIRE, $q, $firebaseAuth, ftAuth) {
-	var defer = $q.defer();
+.service("svAdminLogin", ["FIRE", "$q", "$firebaseAuth", "ftAuth", function (FIRE, $q, $firebaseAuth, ftAuth) {
 	
 	this.adminLogin = function(email, password){
 		ftAuth.$authWithPassword({
@@ -12,4 +11,4 @@ angular.module("camtaylorApp")
 			console.warn("Authentication failed:" + error);
 		})
 	}
-});
+}]);
