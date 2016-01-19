@@ -1,3 +1,9 @@
 <div class="admin-main">
-	<h2>Admin Main</h2>
+	<h2>Admin Main {{rsvpDataDone}}</h2>
+	<div ng-repeat="people in rsvpData" class="peopleRsvp">
+		<h3>{{people.firstName}} {{people.lastName}}</h3>
+		<p>{{people.email}} // {{people.tel}}</p>
+		<p>{{people.guests}}</p>
+		<p>{{people.message}}</p>
+	</div>
 </div>

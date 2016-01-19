@@ -764,4 +764,9 @@ admin-login {
       color: #C85A71;
       font-size: 1.3em; }
 
+admin-main .peopleRsvp {
+  height: 200px;
+  width: 200px;
+  background-color: red; }
+
 /*# sourceMappingURL=main.css.map */
