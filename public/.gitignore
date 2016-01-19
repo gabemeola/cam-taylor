@@ -1,7 +1,3 @@
 node_modules
 .sass-cache
 *.css.map
-admin.html
-./sass/_admin.sass
-_admin.sass
-admin
