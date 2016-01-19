@@ -1,9 +1,23 @@
 <div class="admin-main">
-	<h2>Admin Main {{rsvpDataDone}}</h2>
-	<div ng-repeat="people in rsvpData" class="peopleRsvp">
-		<h3>{{people.firstName}} {{people.lastName}}</h3>
-		<p>{{people.email}} // {{people.tel}}</p>
-		<p>{{people.guests}}</p>
-		<p>{{people.message}}</p>
-	</div>
+	<md-button class="md-primary md-raised" ng-click="showAdvanced($event)" flex="100" flex-gt-md="auto">
+      Custom Dialog
+    </md-button>
+	<md-content>
+		<md-card ng-repeat="people in rsvpData" class="peopleRsvp">
+			<div class="peopleTitle">
+				<h3>{{people.firstName}} {{people.lastName}}</h3>
+			</div>
+					<span class="md-subhead">{{people.email}} // {{people.tel}}</span>
+			<p>{{people.guests}}</p>
+			<p>{{people.message}}</p>
+			<md-card-actions layout="row" layout-align="end center">
+				<a href="tel:{{people.tel}}">
+					<md-button>Call</md-button>
+				</a>
+				<a href="mailto:{{people.email}}">
+					<md-button>Email</md-button>
+				</a>
+			</md-card-actions>
+		</md-card>
+	</md-content>
 </div>

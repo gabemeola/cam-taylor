@@ -1,5 +1,5 @@
 angular.module("camtaylorApp")
-.controller("ctAdmin", ["$scope", "svAdminLogin", "ftAuth", "FIRE", "$q", function($scope, svAdminLogin, ftAuth, FIRE, $q) {
+.controller("ctAdmin", ["$scope", "svAdminLogin", "ftAuth", "FIRE", "$q", function($scope, svAdminLogin, ftAuth, FIRE, $q, $mdDialog, $mdMedia) {
 	var ref = new Firebase(FIRE.url + "rsvps/"),
 			defer = $q.defer();
 	
@@ -25,5 +25,14 @@ angular.module("camtaylorApp")
 		$scope.rsvpData = res;
 		console.log($scope.rsvpData)
 	});
-									
+	
+	$scope.showAdvanced = function(ev) {
+		$mdDialog.show({
+			controller: null,
+			templateUrl: './templates/_cameronbio.html',
+			parent: angular.element(document.body),
+			targetEvent: ev,
+			clickOutsideToClose:true,
+		})
+	}
 }]);

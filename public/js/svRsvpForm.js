@@ -3,7 +3,7 @@ angular.module("camtaylorApp")
 	
 	this.postRsvp = function(firstName, lastName, email, tel, guests, message) {
 		
-				ref = new Firebase(FIRE.url + "rsvps/" + tel + "/");
+		var ref = new Firebase(FIRE.url + "rsvps/" + tel + "/");
 		console.warn(firstName, lastName, email, tel, guests, message);
 		
 		ref.set({

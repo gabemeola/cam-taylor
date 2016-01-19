@@ -258,7 +258,7 @@
 /***/ function(module, exports) {
 
 	angular.module("camtaylorApp")
-	.controller("ctAdmin", ["$scope", "svAdminLogin", "ftAuth", "FIRE", "$q", function($scope, svAdminLogin, ftAuth, FIRE, $q) {
+	.controller("ctAdmin", ["$scope", "svAdminLogin", "ftAuth", "FIRE", "$q", function($scope, svAdminLogin, ftAuth, FIRE, $q, $mdDialog, $mdMedia) {
 		var ref = new Firebase(FIRE.url + "rsvps/"),
 				defer = $q.defer();
 		
@@ -284,7 +284,16 @@
 			$scope.rsvpData = res;
 			console.log($scope.rsvpData)
 		});
-										
+		
+		$scope.showAdvanced = function(ev) {
+			$mdDialog.show({
+				controller: null,
+				templateUrl: './templates/_cameronbio.html',
+				parent: angular.element(document.body),
+				targetEvent: ev,
+				clickOutsideToClose:true,
+			})
+		}
 	}]);
 
 /***/ },
@@ -315,7 +324,7 @@
 		
 		this.postRsvp = function(firstName, lastName, email, tel, guests, message) {
 			
-					ref = new Firebase(FIRE.url + "rsvps/" + tel + "/");
+			var ref = new Firebase(FIRE.url + "rsvps/" + tel + "/");
 			console.warn(firstName, lastName, email, tel, guests, message);
 			
 			ref.set({
