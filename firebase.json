@@ -1,0 +1,35 @@
+{
+  "firebase": "taylor-cam",
+  "public": "public",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+		"**/sass/*",
+		"./public/sass/",
+		"webpack.config.js",
+		"package.json",
+		"**/.sass.cache/*",
+		".*",
+		"**/node_modules/*",
+		"./public/node_modules/",
+		"**/js/*",
+		"./public/js/"
+  ],
+	"redirects": [ 
+		{
+		"source" : "/admin",
+		"destination" : "/admin.html",
+		"type" : 301
+		},
+		{
+		"source" : "/a",
+		"destination" : "/admin.html",
+		"type" : 301
+		},
+		{
+			"source" : "/foo",
+			"destination" : "/index.html",
+			"type" : 301
+		} 
+	]
+}

@@ -69,18 +69,21 @@ angular.module("camtaylorApp")
 	
 	//Pushes the new updated bios to Firebase
 	$scope.pushBios = function(name) {
+		$scope.bioUpdated = false;
 		console.warn("$scope.pushBios ran");
 		if(name == "cameron") {
 			var updatedBio = $scope.cameronBio;
 			svUpdateBios.pushUpdate(name, updatedBio);
 				if(svUpdateBios.done){
 					console.warn("Updated");
+					$scope.bioUpdated = true;
 				}
 		} else if(name == "taylor") {
 			var updatedBio = $scope.taylorBio;
 			svUpdateBios.pushUpdate(name, updatedBio)
 				if(svUpdateBios.done){
 					console.warn("Updated");
+					$scope.bioUpdated = true;
 				}
 		}
 	}
