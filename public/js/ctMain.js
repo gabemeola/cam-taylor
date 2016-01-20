@@ -1,5 +1,5 @@
 angular.module("camtaylorApp")
-.controller("ctMain", ["$scope", "$q", function($scope, $q){
+.controller("ctMain", ["$scope", "$q", "FIRE", function($scope, $q, FIRE) {
 	countdownClock();
 	$scope.uiview = true;
 	
@@ -44,4 +44,18 @@ angular.module("camtaylorApp")
 	$scope.ngMapInit = function (){
 		$scope.ngMapShow = true;
 	}
+	
+	var grabBios = function() {
+		var ref = new Firebase(FIRE.url + "bios/"),
+			defer = $q.defer();
+		ref.on("value", function(snapshot) {
+			var data = snapshot.val();
+			defer.resolve(data);
+		})
+		return defer.promise;
+	}
+	grabBios().then(function(res) {
+		$scope.cameronBio = res.cameron;
+		$scope.taylorBio = res.taylor;
+	});
 }]);

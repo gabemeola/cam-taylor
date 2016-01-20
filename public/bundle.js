@@ -169,7 +169,7 @@
 /***/ function(module, exports) {
 
 	angular.module("camtaylorApp")
-	.controller("ctMain", ["$scope", "$q", function($scope, $q){
+	.controller("ctMain", ["$scope", "$q", "FIRE", function($scope, $q, FIRE) {
 		countdownClock();
 		$scope.uiview = true;
 		
@@ -214,6 +214,20 @@
 		$scope.ngMapInit = function (){
 			$scope.ngMapShow = true;
 		}
+		
+		var grabBios = function() {
+			var ref = new Firebase(FIRE.url + "bios/"),
+				defer = $q.defer();
+			ref.on("value", function(snapshot) {
+				var data = snapshot.val();
+				defer.resolve(data);
+			})
+			return defer.promise;
+		}
+		grabBios().then(function(res) {
+			$scope.cameronBio = res.cameron;
+			$scope.taylorBio = res.taylor;
+		});
 	}]);
 
 /***/ },
@@ -258,9 +272,7 @@
 /***/ function(module, exports) {
 
 	angular.module("camtaylorApp")
-	.controller("ctAdmin", ["$scope", "svAdminLogin", "ftAuth", "FIRE", "$q", function($scope, svAdminLogin, ftAuth, FIRE, $q, $mdDialog, $mdMedia) {
-		var ref = new Firebase(FIRE.url + "rsvps/"),
-				defer = $q.defer();
+	.controller("ctAdmin", ["$scope", "svAdminLogin", "ftAuth", "FIRE", "$q", "$mdDialog", "$mdMedia", function($scope, svAdminLogin, ftAuth, FIRE, $q, $mdDialog, $mdMedia) {
 		
 		$scope.adminLogin = function() {
 			var username = $scope.admin.username,
@@ -273,6 +285,8 @@
 		});
 		
 		var grabRsvp = function(){
+			var ref = new Firebase(FIRE.url + "rsvps/"),
+					defer = $q.defer();
 			ref.on("value", function(snapshot) {
 				var data = snapshot.val();
 				defer.resolve(data);
@@ -285,15 +299,34 @@
 			console.log($scope.rsvpData)
 		});
 		
-		$scope.showAdvanced = function(ev) {
+		$scope.showEditCameronBio = function(ev) {
 			$mdDialog.show({
 				controller: null,
-				templateUrl: './templates/_cameronbio.html',
+				templateUrl: './templates/_edit-cameronbio.html',
 				parent: angular.element(document.body),
 				targetEvent: ev,
 				clickOutsideToClose:true,
 			})
 		}
+		$scope.cancel = function() {
+	    $mdDialog.cancel();
+	  };
+			
+			
+		var grabBios = function() {
+			var ref = new Firebase(FIRE.url + "bios/"),
+					defer = $q.defer();
+			ref.on("value", function(snapshot) {
+				var data = snapshot.val();
+				defer.resolve(data);
+			})
+				return defer.promise;
+		}
+		grabBios().then(function(res) {
+			$scope.cameronBio = res.cameron;
+			$scope.taylorBio = res.taylor;
+			console.log($scope.cameronBio);
+		});
 	}]);
 
 /***/ },
