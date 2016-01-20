@@ -12,6 +12,7 @@ require( '.\/ctAdmin.js');
 //Services
 require( '.\/svAdminLogin.js');
 require( '.\/svRsvpForm.js');
+require( '.\/svUpdateBios.js');
 //End Services
 
 //Factories

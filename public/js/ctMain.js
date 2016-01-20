@@ -44,7 +44,7 @@ angular.module("camtaylorApp")
 	$scope.ngMapInit = function (){
 		$scope.ngMapShow = true;
 	}
-	
+	//Grabs Bios from Firebase
 	var grabBios = function() {
 		var ref = new Firebase(FIRE.url + "bios/"),
 			defer = $q.defer();
@@ -55,7 +55,7 @@ angular.module("camtaylorApp")
 		return defer.promise;
 	}
 	grabBios().then(function(res) {
-		$scope.cameronBio = res.cameron;
-		$scope.taylorBio = res.taylor;
+		$scope.cameronBio = res.cameron.bio;
+		$scope.taylorBio = res.taylor.bio;
 	});
 }]);

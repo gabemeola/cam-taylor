@@ -14,6 +14,6 @@ angular.module("camtaylorApp")
 			guests: guests,
 			message: message
 		});
-		return this.done = true;
+		return this.done = "hello";
 	}
 }]);

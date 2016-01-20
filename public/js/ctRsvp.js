@@ -19,7 +19,7 @@ angular.module("camtaylorApp")
 		if(svRsvpForm.done){
 			$scope.rsvp.firstname =  " ";
 			$scope.rsvp.lastname = " " ;
-			$scope.rsvp.email =  "username@email.com";
+			$scope.rsvp.email =  " ";
 			$scope.rsvp.tel =  " ";
 			$scope.guests = 0;
 			$scope.rsvp.message =  " ";

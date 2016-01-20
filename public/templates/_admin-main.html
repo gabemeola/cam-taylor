@@ -1,8 +1,13 @@
 <div class="admin-main">
-	<md-button class="md-primary md-raised" ng-click="showEditCameronBio($event)" flex="100" flex-gt-md="auto">
-      Edit Cameron's Bio
-    </md-button>
 	<md-content>
+		<div class="button-wrapper">
+			<md-button class="md-raised" ng-click="showEditCameronBio($event)" flex="50" flex-gt-md="auto">
+				Edit Cameron's Bio
+		 </md-button>
+			<md-button class="md-raised" ng-click="showEditTaylorBio($event)" flex="50" flex-gt-md="auto">
+				Edit Taylor's Bio
+		 </md-button>
+		</div>
 		<md-card ng-repeat="people in rsvpData" class="peopleRsvp">
 			<div class="peopleTitle">
 				<h3>{{people.firstName}} {{people.lastName}}</h3>

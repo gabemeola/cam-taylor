@@ -12,13 +12,13 @@
     <md-dialog-content>
       <div class="md-dialog-content">
 				<md-input-container class="bio-edit">
-					<textarea ng-model="cameronBio"></textarea>
+					<textarea ng-model="cameronBio" aria-label="Edit Cameron's Bio"></textarea>
 				</md-input-container>
       </div>
     </md-dialog-content>
     <md-dialog-actions layout="row">
       <span flex></span>
-      <md-button ng-click="answer('useful')" style="margin-right:20px;">
+      <md-button ng-click="pushBios('cameron')" style="margin-right:20px;">
         SAVE
       </md-button>
     </md-dialog-actions>
