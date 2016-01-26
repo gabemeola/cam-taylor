@@ -1,3 +1,10 @@
+//Injectable
+import angular from "public/angular";
+import ngAnimate from "public/angular-animate";
+import ngAria from "public/angular-aria";
+import uirouter from "public/angular-ui-router";
+import ngMaterial from "public/angular-material";
+
 //App
 require( '.\/app.js');
 //Directive
