@@ -46,6 +46,11 @@ $ webpack-dev-server
 or 
 $ npm start
 ```
+When your app is ready for production run
+```sh
+$ webpack -p
+```
+This will create a minified version of your CSS and Javascript
 
 Make sure to run it from the main directory where webpack.config.js is located.
 
