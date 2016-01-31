@@ -67,9 +67,9 @@ For Windows
 SASS compiles .sass files into css.
 We can add sass files to our entry.sass files with @import 
 ```
-@import 'reset';
-@import 'header';
-@import 'footer';
+@import 'reset'
+@import 'header'
+@import 'footer'
 ```
 This is exporting to main.css
 ##### SASS Rules
