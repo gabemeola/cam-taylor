@@ -1,6 +1,6 @@
 var path = require("path"),
-  webpack = require("webpack"),
-  ExtractTextPlugin = require('extract-text-webpack-plugin');
+		webpack = require("webpack"),
+		ExtractTextPlugin = require('extract-text-webpack-plugin');
 module.exports = {
     entry: { //Entry Point for Webpack
       app: ["./js/entry.js", "./sass/entry.sass"]
