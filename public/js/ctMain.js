@@ -20,14 +20,10 @@ angular.module("camtaylorApp")
 			var now = new Date();
 			var distance = end - now;
 			if (distance < 0) {
-					clearInterval(timer);
-					document.getElementById('countdown').innerHTML = 'MARRIED!';
+					$scope.countdown = 'MARRIED!';
 					return;
 			}
 			var days = Math.floor(distance / _day);
-//					hours = Math.floor((distance % _day) / _hour),
-//					minutes = Math.floor((distance % _hour) / _minute),
-//					seconds = Math.floor((distance % _minute) / _second);
 			
 			$scope.countdown = days + " Days!";
     }
@@ -43,7 +39,7 @@ angular.module("camtaylorApp")
 	
 	$scope.ngMapInit = function (){
 		$scope.ngMapShow = true;
-	}
+	};
 	//Grabs Bios from Firebase
 	var grabBios = function() {
 		var ref = new Firebase(FIRE.url + "bios/"),
