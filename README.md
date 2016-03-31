@@ -3,7 +3,7 @@ I created a Web App for my good friend Cameron his new wife Taylor focused on ea
 
 Components of the app are ui routes, rsvp form, registry data, backend to store that data. Also i included a admin site to allow the couple to change their bios and easily view the RSVPs to keep track of things like, number of people coming, and to quickly call, text, or email any of the RSVP recipients.
 
-Tech Use: HTML5, CSS3, Javascript, ES2015, [Angularjs](https://angularjs.org/), [Angular UI-Router](https://github.com/angular-ui/ui-router), Angular Animate, [ngMap](https://github.com/allenhwkim/angularjs-google-maps), Firebase, and Webpack
+Tech Use: HTML5, CSS3, Javascript, ES2015, [Angularjs](https://angularjs.org/), [Angular UI-Router](https://github.com/angular-ui/ui-router), Angular Animate, [ngMap](https://github.com/allenhwkim/angularjs-google-maps), Firebase, [Webpack](https://webpack.github.io/), [Babel](https://babeljs.io/), and [Image Webpack Loader](https://github.com/tcoopman/image-webpack-loader)
 
 ## Installation
 
