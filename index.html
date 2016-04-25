@@ -1,42 +1,38 @@
 <!DOCTYPE html>
-<html data-ng-app="camtaylorApp">
+<html data-ng-app="camtaylorApp">	
 	<head>
-		<title>Cam/Taylor</title>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular-animate.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular-aria.min.js"></script>
-		<script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
-		<script src="https://cdn.firebase.com/libs/angularfire/1.1.3/angularfire.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-material/0.11.4/angular-material.min.js"></script>
-		<script src="js/ng-map.min.js"></script>
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/0.11.4/angular-material.min.css"/>
-		<link rel="stylesheet" href="public/main.css"/>
+		<title>Taylor & Cameron's Wedding</title>
+		<link rel="stylesheet" href="./build/main.css"/>
+		<meta name="HandheldFriendly" content="True">
+		<meta name="MobileOptimized" content="320">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<script src="./build/bundle.js"></script>
 	</head>
 
-	<body data-ng-controller="ctMain">
+	<body data-ng-controller="ctMain" ng-cloak>
 		<div class="background">
 			<div class="card-wrapper">
 				<div class="card">
-					<div class="cover-img"></div>
+					<div class="cover-img" ng-cloak></div>
 					<div class="card-flexbox">
 						<card-content></card-content>
 						<div class="countdown">
-							<h2 id="countdown">{{countdown}} Days!</h2>
-							<a ui-sref="location">
-								<md-button ng-click="uiviewOpen(true)"class="countdown-img md-raised" ng-click="uiviewOpen(true)"></md-button>
+							<h2 id="countdown">{{countdown}}</h2>
+							<a ui-sref="templebtn" ng-click="ngMapInit()">
+								<md-button class="countdown-img md-raised" ng-click="uiviewOpen()" aria-label="Temple Button"></md-button>
 							</a>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="card--expanded" id="card--expanded">
-				<div class="expanded-wrapper">
-					<ui-view></ui-view>
+			<div class="card--expanded-background">
+				<div class="card--expanded" id="card--expanded" ng-hide="uiview">
+					<div class="expanded-wrapper">
+						<ui-view></ui-view>
+					</div>
 				</div>
 			</div>
 		</div>
-		<script src="public/bundle.js"></script>
 		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDEY2hjXNg9y0LyGxs4klbSgTFdsiwAxHE"></script>
 	</body>
 </html>
