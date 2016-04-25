@@ -25,7 +25,8 @@
     "angular-ui-router": "^0.2.18",
     "angularfire": "^1.2.0",
     "bounce.js": "^0.8.2",
-    "firebase": "^2.4.2"
+    "firebase": "^2.4.2",
+    "webpack": "^1.13.0"
   },
   "devDependencies": {
     "autoprefixer": "^6.3.6",
