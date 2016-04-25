@@ -1,10 +1,1 @@
-firebase.json
-.idea
-node_modules
-bundle.js
-style.css
-bower_components
-.sass-cache
-*.css.map
-.DS_Store
-**/build/
+
