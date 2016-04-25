@@ -1,5 +1,5 @@
 angular.module("camtaylorApp")
-.service("svRsvpForm", ["$q", "FIRE", "$firebaseObject", function($q, FIRE, $firebaseObject) {
+.service("svRsvpForm", ["$q", "FIRE", function($q, FIRE) {
 	
 	this.postRsvp = function(firstName, lastName, email, tel, guests, message) {
 		

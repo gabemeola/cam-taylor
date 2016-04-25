@@ -1,5 +1,5 @@
 angular.module("camtaylorApp")
-.service("svUpdateBios",["FIRE", "$q", "$firebaseAuth", "ftAuth", function(FIRE, $q, $firebaseAuth, ftAuth) {
+.service("svUpdateBios",["FIRE", function(FIRE) {
 	
 	this.pushUpdate = function(name, bio) {
 		var ref = new Firebase(FIRE.url + "bios/" + name);
