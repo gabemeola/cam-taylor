@@ -10,7 +10,7 @@ module.exports = {
 		app: ["./public/js/entry.js", "./public/sass/entry.sass"]
 	},
 	output: {
-		path: "public/",
+		path: "public/build/",
 		filename: "bundle.js" //Bundled Javascript Webpack Spits out.
 	},
 	module: {

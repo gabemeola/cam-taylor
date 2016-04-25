@@ -10,9 +10,9 @@ module.exports = {
 		app: ["./public/js/entry.js", "./public/sass/entry.sass"]
 	},
 	output: {
-		path: "public/",
+		path: "public/build/",
 		filename: "bundle.js",
-		publicPath: "//localhost:3333/public/"//Bundled Javascript Webpack Spits out.
+		publicPath: "//localhost:3333/public/build/"//Bundled Javascript Webpack Spits out.
 	},
 	devServer: { //Allows webpack-dev-server to be live reloaded
 		inline: true,
