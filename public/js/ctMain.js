@@ -47,9 +47,9 @@ angular.module("camtaylorApp")
 		ref.on("value", function(snapshot) {
 			var data = snapshot.val();
 			defer.resolve(data);
-		})
+		});
 		return defer.promise;
-	}
+	};
 	grabBios().then(function(res) {
 		$scope.cameronBio = res.cameron.bio;
 		$scope.taylorBio = res.taylor.bio;

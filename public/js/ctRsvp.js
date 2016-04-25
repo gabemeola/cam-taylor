@@ -15,7 +15,7 @@ angular.module("camtaylorApp")
 				message = $scope.rsvp.message;
 		
 		console.log(tel);
-		svRsvpForm.postRsvp(firstName, lastName, email, tel, guests, message)
+		svRsvpForm.postRsvp(firstName, lastName, email, tel, guests, message);
 		if(svRsvpForm.done){
 			$scope.rsvp.firstname =  " ";
 			$scope.rsvp.lastname = " " ;
