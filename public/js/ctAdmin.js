@@ -5,7 +5,7 @@ angular.module("camtaylorApp")
 		var username = $scope.admin.username,
 				password = $scope.admin.password;
 		svAdminLogin.adminLogin(username, password);
-	}
+	};
 	
 	ftAuth.$onAuth(function(authData) {
 		$scope.authData = authData;
@@ -17,9 +17,9 @@ angular.module("camtaylorApp")
 		ref.on("value", function(snapshot) {
 			var data = snapshot.val();
 			defer.resolve(data);
-		})
+		});
 		return defer.promise;
-	}
+	};
 	
 	grabRsvp().then(function(res) {
 		$scope.rsvpData = res;
@@ -32,9 +32,9 @@ angular.module("camtaylorApp")
 			templateUrl: './templates/_edit-cameronbio.html',
 			parent: angular.element(document.body),
 			targetEvent: ev,
-			clickOutsideToClose:true,
+			clickOutsideToClose:true
 		})
-	}
+	};
 	//Edit Taylor's Bio Modal
 	$scope.showEditTaylorBio = function(ev) {
 		$mdDialog.show({
@@ -42,9 +42,9 @@ angular.module("camtaylorApp")
 			templateUrl: './templates/_edit-taylorbio.html',
 			parent: angular.element(document.body),
 			targetEvent: ev,
-			clickOutsideToClose:true,
+			clickOutsideToClose:true
 		})
-	}
+	};
 	//X button to close modal
 	$scope.cancel = function() {
     $mdDialog.cancel();
@@ -57,9 +57,9 @@ angular.module("camtaylorApp")
 		ref.on("value", function(snapshot) {
 			var data = snapshot.val();
 			defer.resolve(data);
-		})
+		});
 		return defer.promise;
-	}
+	};
 	
 	//Invokes Grab Bios function and binds them to the scope
 	grabBios().then(function(res) {
@@ -80,7 +80,7 @@ angular.module("camtaylorApp")
 				}
 		} else if(name == "taylor") {
 			var updatedBio = $scope.taylorBio;
-			svUpdateBios.pushUpdate(name, updatedBio)
+			svUpdateBios.pushUpdate(name, updatedBio);
 				if(svUpdateBios.done){
 					console.warn("Updated");
 					$scope.bioUpdated = true;
