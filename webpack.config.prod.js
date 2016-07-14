@@ -1,22 +1,26 @@
 var path = require("path"),
 	webpack = require("webpack"),
 	ExtractTextPlugin = require('extract-text-webpack-plugin'),
-	autoprefixer = require('autoprefixer');
+	autoprefixer = require('autoprefixer'),
+	HtmlWebpackPlugin = require('html-webpack-plugin');
+
 module.exports = {
 	resolve: { //Resolves ES2015 Imports
-		extensions: ["", ".js"]
+		extensions: ["", ".js", ".jsx"]
 	},
 	entry: { //Entry Point for Webpack
-		app: ["./public/js/entry.js", "./public/sass/entry.sass"]
+		app: [
+			"./public/js/entry.js",
+			"./public/sass/entry.sass"]
 	},
 	output: {
-		path: "public/build/",
+		path: __dirname + "/dist/",
 		filename: "bundle.js" //Bundled Javascript Webpack Spits out.
 	},
 	module: {
 		loaders: [
 			{ //Babel loader for converting ES2015 to ES5
-				test: /\.js$/,
+				test: /\.jsx?$/,
 				exclude: /node_modules/,
 				loader: 'babel-loader',
 				query: {
@@ -45,9 +49,23 @@ module.exports = {
 		]
 	},
 	//Config for Post-CSS and AutoPrefixer
-	postcss: [ autoprefixer({ remove: false, browsers: ['last 2 versions'] }) ],
+	postcss: [ autoprefixer({ remove: true, browsers: ['> 5%'] }) ],
 	plugins: [
-		new webpack.HotModuleReplacementPlugin(),
-		new ExtractTextPlugin("main.css")
+		new ExtractTextPlugin("main.css"),
+		new webpack.DefinePlugin({
+			'process.env': {
+				'NODE_ENV': JSON.stringify('production')
+			}
+		}),
+		new webpack.optimize.UglifyJsPlugin({
+			compress: {
+				warnings: false
+			}
+		}),
+		new HtmlWebpackPlugin({
+			template: __dirname + "/app/index.html",
+			filename: "index.html",
+			inject: "body"
+		})
 	]
 };

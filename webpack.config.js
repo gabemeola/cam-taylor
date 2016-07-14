@@ -1,18 +1,28 @@
-var path = require("path"),
+var address,
+	path = require("path"),
 	webpack = require("webpack"),
 	ExtractTextPlugin = require('extract-text-webpack-plugin'),
-	autoprefixer = require('autoprefixer');
+	autoprefixer = require('autoprefixer'),
+	ifaces = require('os').networkInterfaces();
+
+// Finds out your local IP address
+for (var dev in ifaces) {
+	ifaces[dev].filter((details) => details.family === 'IPv4' && details.internal === false ? address = details.address: undefined);
+}
 module.exports = {
 	resolve: { //Resolves ES2015 Imports
-		extensions: ["", ".js"]
+		extensions: ["", ".js", ".jsx"]
 	},
 	entry: { //Entry Point for Webpack
-		app: ["./public/js/entry.js", "./public/sass/entry.sass"]
+		app: [
+			"./public/js/entry.js",
+			"./public/sass/entry.sass"
+		]
 	},
 	output: {
-		path: "public/build/",
+		path: __dirname + "/dist/",
 		filename: "bundle.js",
-		publicPath: "//localhost:3333/public/build/"//Bundled Javascript Webpack Spits out.
+		publicPath: `http://${address}:3333/`//Bundled Javascript Webpack Spits out.
 	},
 	devServer: { //Allows webpack-dev-server to be live reloaded
 		inline: true,
@@ -23,7 +33,7 @@ module.exports = {
 	module: {
 		loaders: [
 			{ //Babel loader for converting ES2015 to ES5
-				test: /\.js$/,
+				test: /\.jsx?$/,
 				exclude: /node_modules/,
 				loader: 'babel-loader',
 				query: {
@@ -32,7 +42,7 @@ module.exports = {
 			},
 			{ //Converts SASS to CSS
 				test: /\.sass$/,
-				loader: ExtractTextPlugin.extract('css-loader?sourceMap!postcss-loader!resolve-url!sass-loader?indentedSyntax')
+				loader: 'style-loader!css-loader?sourceMap!postcss-loader!resolve-url!sass-loader?indentedSyntax'
 			},
 			{ //Loads the font files from imports
 				test:  /\.(ttf|eot|woff(2)?)(\?[a-z0-9]+)?$/,
@@ -52,9 +62,18 @@ module.exports = {
 		]
 	},
 	//Config for Post-CSS and AutoPrefixer
-	postcss: [ autoprefixer({ remove: false, browsers: ['last 2 versions'] }) ],
+	postcss: [ autoprefixer({ remove: true, browsers: ['> 5%'] }) ],
 	plugins: [
+		new webpack.DefinePlugin({
+			'process.env': {
+				'NODE_ENV': JSON.stringify('development')
+			}
+		}),
 		new webpack.HotModuleReplacementPlugin(),
-		new ExtractTextPlugin("main.css")
+		new HtmlWebpackPlugin({
+			template: __dirname + "/app/index.html",
+			filename: "index.html",
+			inject: "body"
+		})
 	]
 };
