@@ -10,8 +10,8 @@ module.exports = {
 	},
 	entry: { //Entry Point for Webpack
 		app: [
-			"./public/js/entry.js",
-			"./public/sass/entry.sass"
+			"./app/entry.js",
+			"./app/sass/entry.sass"
 		]
 	},
 	output: {
