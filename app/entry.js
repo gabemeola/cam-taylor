@@ -2,8 +2,6 @@
 import "angular";
 import "firebase";
 import "angularfire";
-import "angular-animate";
-import "angular-aria";
 import "angular-ui-router";
 import "angular-material";
 
