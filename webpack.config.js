@@ -1,7 +1,7 @@
 var address,
 	path = require("path"),
 	webpack = require("webpack"),
-	ExtractTextPlugin = require('extract-text-webpack-plugin'),
+	HtmlWebpackPlugin = require('html-webpack-plugin'),
 	autoprefixer = require('autoprefixer'),
 	ifaces = require('os').networkInterfaces();
 
@@ -15,8 +15,8 @@ module.exports = {
 	},
 	entry: { //Entry Point for Webpack
 		app: [
-			"./public/js/entry.js",
-			"./public/sass/entry.sass"
+			"./app/entry.js",
+			"./app/sass/entry.sass"
 		]
 	},
 	output: {
