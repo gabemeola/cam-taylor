@@ -1,11 +1,11 @@
 //Injectable
-import angular from "angular";
+import "angular";
 import "firebase";
-import firebae from "angularfire";
-import ngAnimate from "angular-animate";
-import ngAria from "angular-aria";
-import uirouter from "angular-ui-router";
-import ngMaterial from "angular-material";
+import "angularfire";
+import "angular-animate";
+import "angular-aria";
+import "angular-ui-router";
+import "angular-material";
 
 //App
 require( '.\/app.js');

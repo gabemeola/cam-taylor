@@ -37,5 +37,5 @@ angular.module("camtaylorApp", ["firebase", "ui.router", "ngMaterial", "ngAnimat
 			});
 	}])
 	.config(['$compileProvider', function ($compileProvider) {
-		$compileProvider.debugInfoEnabled(false);
+		$compileProvider.debugInfoEnabled(true);
 	}]);
