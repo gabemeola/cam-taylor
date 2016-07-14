@@ -35,7 +35,17 @@ angular.module("camtaylorApp", ["firebase", "ui.router", "ngMaterial", "ngAnimat
 				template: require("../templates/_registry.html"),
 				controller: null
 			});
-	}])
-	.config(['$compileProvider', function ($compileProvider) {
-		$compileProvider.debugInfoEnabled(true);
 	}]);
+
+// Disable Angular Debug is Environment is in production
+if(process.env.production) {
+	angular.module("camtaylorApp")
+		.config(['$compileProvider', function ($compileProvider) {
+			$compileProvider.debugInfoEnabled(false);
+		}]);
+} else {
+	angular.module("camtaylorApp")
+		.config(['$compileProvider', function ($compileProvider) {
+			$compileProvider.debugInfoEnabled(true);
+		}]);
+}
