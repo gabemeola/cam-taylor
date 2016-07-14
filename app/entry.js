@@ -1,6 +1,6 @@
 //Injectable
 import "angular";
-import "./js/firebase";
+import "firebase";
 import "angularfire";
 import "angular-animate";
 import "angular-aria";
