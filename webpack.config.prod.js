@@ -39,7 +39,7 @@ module.exports = {
 			{ //Optimizes Images
 				test: /\.(jpe?g|png|gif|svg)$/i,
 				loaders: [
-					'file?hash=sha512&digest=hex&name=./assets/min-imgs/[hash].[ext]',
+					'file?hash=sha512&digest=hex&name=./assets/[hash].[ext]',
 					'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false&progressive=true'
 				]
 			},
@@ -66,7 +66,7 @@ module.exports = {
 		new HtmlWebpackPlugin({
 			template: __dirname + "/app/index.html",
 			filename: "index.html",
-			inject: "body"
+			inject: "head"
 		})
 	]
 };

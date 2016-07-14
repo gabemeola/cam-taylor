@@ -27,4 +27,4 @@ import './js/ftAuth.js';
 //End of Factories
 
 //Addons
-import './js/ng-map.min.js';
+import './js/ng-map.debug.js';
