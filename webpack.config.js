@@ -24,6 +24,7 @@ module.exports = {
 		filename: "bundle.js",
 		publicPath: `http://${address}:3333/`//Bundled Javascript Webpack Spits out.
 	},
+	devtool: 'source-map',
 	devServer: { //Allows webpack-dev-server to be live reloaded
 		inline: true,
 		hot: true,
