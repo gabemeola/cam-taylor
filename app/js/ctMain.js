@@ -41,9 +41,6 @@ angular.module("camtaylorApp")
 		$scope.ngMapShow = bool;
 		// console.log($scope.ngMapShow);
 		NgMap.getMap()
-			.then((map) => {
-				console.log(map);
-			});
 	};
 
 	//Grabs Bios from Firebase
