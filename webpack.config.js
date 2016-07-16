@@ -70,6 +70,9 @@ module.exports = {
 				'NODE_ENV': JSON.stringify('development')
 			}
 		}),
+		new webpack.ProvidePlugin({
+			angular: 'angular'
+		}),
 		new webpack.HotModuleReplacementPlugin(),
 		new HtmlWebpackPlugin({
 			template: __dirname + "/app/index.html",

@@ -58,6 +58,9 @@ module.exports = {
 				'NODE_ENV': JSON.stringify('production')
 			}
 		}),
+		new webpack.ProvidePlugin({
+			angular: 'angular'
+		}),
 		new webpack.optimize.UglifyJsPlugin({
 			compress: {
 				warnings: false

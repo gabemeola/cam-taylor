@@ -1,5 +1,4 @@
 //Injectable
-import "angular";
 import "firebase";
 import "angularfire";
 import "angular-ui-router";
