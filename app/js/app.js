@@ -38,7 +38,7 @@ angular.module("camtaylorApp", ["firebase", "ui.router", "ngMaterial", "ngAnimat
 	}]);
 
 // Disable Angular Debug is Environment is in production
-if(process.env.production) {
+if(process.env.NODE_ENV === "production") {
 	angular.module("camtaylorApp")
 		.config(['$compileProvider', function ($compileProvider) {
 			$compileProvider.debugInfoEnabled(false);
